@@ -76,9 +76,9 @@ namespace WinApp_GraphicInterface.Forms.DrawAreaPlan
 
         void calculate()
         {
-            AreaProperites.CountCellHeght = Convert.ToInt32( AreaProperites.Height *100/ int.Parse(txtVSR.Text));
+            AreaProperites.CountCellHeight = Convert.ToInt32( AreaProperites.Height *100/ int.Parse(txtVSR.Text));
             AreaProperites.CountCellWidth = Convert.ToInt32(AreaProperites.Width *100/ int.Parse(txtVSR.Text));
-            txtCellHeight.Text = AreaProperites.CountCellHeght.ToString();
+            txtCellHeight.Text = AreaProperites.CountCellHeight.ToString();
             txtCellWidth.Text = AreaProperites.CountCellWidth.ToString();        
         }
     }

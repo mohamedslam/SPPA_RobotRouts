@@ -71,10 +71,8 @@
             this.pnlCanvas = new System.Windows.Forms.Panel();
             this.pnlRulerLeft = new System.Windows.Forms.Panel();
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.rulerControl1 = new Lyquidity.UtilityLibrary.Controls.RulerControl();
             this.pnlRulerTop = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.hrulerControl = new Lyquidity.UtilityLibrary.Controls.RulerControl();
             this.pnlZro = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
@@ -83,9 +81,7 @@
             this.pnlProperties.SuspendLayout();
             this.pnlMainDrowing.SuspendLayout();
             this.pnlRulerLeft.SuspendLayout();
-            this.pnlLeft.SuspendLayout();
             this.pnlRulerTop.SuspendLayout();
-            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlToolbox
@@ -94,7 +90,7 @@
             this.pnlToolbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlToolbox.Location = new System.Drawing.Point(0, 20);
             this.pnlToolbox.Name = "pnlToolbox";
-            this.pnlToolbox.Size = new System.Drawing.Size(170, 370);
+            this.pnlToolbox.Size = new System.Drawing.Size(170, 516);
             this.pnlToolbox.TabIndex = 0;
             // 
             // pgElement
@@ -104,7 +100,7 @@
             this.pgElement.Location = new System.Drawing.Point(0, 20);
             this.pgElement.Name = "pgElement";
             this.pgElement.PropertySort = System.Windows.Forms.PropertySort.Categorized;
-            this.pgElement.Size = new System.Drawing.Size(178, 370);
+            this.pgElement.Size = new System.Drawing.Size(178, 516);
             this.pgElement.TabIndex = 0;
             // 
             // menuStrip1
@@ -118,7 +114,7 @@
             this.groupToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(847, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(889, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -353,9 +349,9 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 416);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 562);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(847, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(889, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -367,7 +363,7 @@
             this.pnlContainerTools.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlContainerTools.Location = new System.Drawing.Point(0, 24);
             this.pnlContainerTools.Name = "pnlContainerTools";
-            this.pnlContainerTools.Size = new System.Drawing.Size(172, 392);
+            this.pnlContainerTools.Size = new System.Drawing.Size(172, 538);
             this.pnlContainerTools.TabIndex = 5;
             // 
             // pnlToolControlBox
@@ -385,9 +381,9 @@
             this.pnlProperties.Controls.Add(this.pgElement);
             this.pnlProperties.Controls.Add(this.panel2);
             this.pnlProperties.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlProperties.Location = new System.Drawing.Point(667, 24);
+            this.pnlProperties.Location = new System.Drawing.Point(709, 24);
             this.pnlProperties.Name = "pnlProperties";
-            this.pnlProperties.Size = new System.Drawing.Size(180, 392);
+            this.pnlProperties.Size = new System.Drawing.Size(180, 538);
             this.pnlProperties.TabIndex = 6;
             // 
             // panel2
@@ -407,17 +403,17 @@
             this.pnlMainDrowing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainDrowing.Location = new System.Drawing.Point(172, 24);
             this.pnlMainDrowing.Name = "pnlMainDrowing";
-            this.pnlMainDrowing.Size = new System.Drawing.Size(495, 392);
+            this.pnlMainDrowing.Size = new System.Drawing.Size(537, 538);
             this.pnlMainDrowing.TabIndex = 7;
             // 
             // pnlCanvas
             // 
             this.pnlCanvas.AutoScroll = true;
-            this.pnlCanvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCanvas.Location = new System.Drawing.Point(20, 20);
             this.pnlCanvas.Name = "pnlCanvas";
-            this.pnlCanvas.Size = new System.Drawing.Size(475, 372);
+            this.pnlCanvas.Size = new System.Drawing.Size(517, 518);
             this.pnlCanvas.TabIndex = 0;
             // 
             // pnlRulerLeft
@@ -426,40 +422,17 @@
             this.pnlRulerLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlRulerLeft.Location = new System.Drawing.Point(0, 20);
             this.pnlRulerLeft.Name = "pnlRulerLeft";
-            this.pnlRulerLeft.Size = new System.Drawing.Size(20, 372);
+            this.pnlRulerLeft.Size = new System.Drawing.Size(20, 518);
             this.pnlRulerLeft.TabIndex = 3;
             // 
             // pnlLeft
             // 
             this.pnlLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLeft.Controls.Add(this.rulerControl1);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(20, 372);
+            this.pnlLeft.Size = new System.Drawing.Size(20, 518);
             this.pnlLeft.TabIndex = 3;
-            // 
-            // rulerControl1
-            // 
-            this.rulerControl1.ActualSize = true;
-            this.rulerControl1.BackColor = System.Drawing.Color.Khaki;
-            this.rulerControl1.DivisionMarkFactor = 5;
-            this.rulerControl1.Divisions = 10;
-            this.rulerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rulerControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rulerControl1.Location = new System.Drawing.Point(0, 0);
-            this.rulerControl1.MajorInterval = 1;
-            this.rulerControl1.MiddleMarkFactor = 3;
-            this.rulerControl1.MouseTrackingOn = true;
-            this.rulerControl1.Name = "rulerControl1";
-            this.rulerControl1.Orientation = Lyquidity.UtilityLibrary.Controls.enumOrientation.orVertical;
-            this.rulerControl1.RulerAlignment = Lyquidity.UtilityLibrary.Controls.enumRulerAlignment.raBottomOrRight;
-            this.rulerControl1.ScaleMode = Lyquidity.UtilityLibrary.Controls.enumScaleMode.smCentimetres;
-            this.rulerControl1.Size = new System.Drawing.Size(18, 370);
-            this.rulerControl1.StartValue = 0D;
-            this.rulerControl1.TabIndex = 2;
-            this.rulerControl1.VerticalNumbers = false;
-            this.rulerControl1.ZoomFactor = 1D;
             // 
             // pnlRulerTop
             // 
@@ -468,40 +441,17 @@
             this.pnlRulerTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRulerTop.Location = new System.Drawing.Point(0, 0);
             this.pnlRulerTop.Name = "pnlRulerTop";
-            this.pnlRulerTop.Size = new System.Drawing.Size(495, 20);
+            this.pnlRulerTop.Size = new System.Drawing.Size(537, 20);
             this.pnlRulerTop.TabIndex = 4;
             // 
             // pnlTop
             // 
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTop.Controls.Add(this.hrulerControl);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(20, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(475, 20);
+            this.pnlTop.Size = new System.Drawing.Size(517, 20);
             this.pnlTop.TabIndex = 2;
-            // 
-            // hrulerControl
-            // 
-            this.hrulerControl.ActualSize = false;
-            this.hrulerControl.BackColor = System.Drawing.Color.Khaki;
-            this.hrulerControl.DivisionMarkFactor = 5;
-            this.hrulerControl.Divisions = 10;
-            this.hrulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hrulerControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.hrulerControl.Location = new System.Drawing.Point(0, 0);
-            this.hrulerControl.MajorInterval = 1;
-            this.hrulerControl.MiddleMarkFactor = 3;
-            this.hrulerControl.MouseTrackingOn = true;
-            this.hrulerControl.Name = "hrulerControl";
-            this.hrulerControl.Orientation = Lyquidity.UtilityLibrary.Controls.enumOrientation.orHorizontal;
-            this.hrulerControl.RulerAlignment = Lyquidity.UtilityLibrary.Controls.enumRulerAlignment.raBottomOrRight;
-            this.hrulerControl.ScaleMode = Lyquidity.UtilityLibrary.Controls.enumScaleMode.smCentimetres;
-            this.hrulerControl.Size = new System.Drawing.Size(473, 18);
-            this.hrulerControl.StartValue = 0D;
-            this.hrulerControl.TabIndex = 1;
-            this.hrulerControl.VerticalNumbers = false;
-            this.hrulerControl.ZoomFactor = 1D;
             // 
             // pnlZro
             // 
@@ -518,7 +468,7 @@
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Location = new System.Drawing.Point(172, 24);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 392);
+            this.splitter1.Size = new System.Drawing.Size(3, 538);
             this.splitter1.TabIndex = 8;
             this.splitter1.TabStop = false;
             // 
@@ -527,9 +477,9 @@
             this.splitter2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.splitter2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter2.Location = new System.Drawing.Point(664, 24);
+            this.splitter2.Location = new System.Drawing.Point(706, 24);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 392);
+            this.splitter2.Size = new System.Drawing.Size(3, 538);
             this.splitter2.TabIndex = 9;
             this.splitter2.TabStop = false;
             // 
@@ -537,7 +487,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 438);
+            this.ClientSize = new System.Drawing.Size(889, 584);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.pnlMainDrowing);
@@ -547,15 +497,14 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "FlowSharpUI";
             this.Text = "Drow Area";
+            this.Load += new System.EventHandler(this.FlowSharpUI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlContainerTools.ResumeLayout(false);
             this.pnlProperties.ResumeLayout(false);
             this.pnlMainDrowing.ResumeLayout(false);
             this.pnlRulerLeft.ResumeLayout(false);
-            this.pnlLeft.ResumeLayout(false);
             this.pnlRulerTop.ResumeLayout(false);
-            this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,8 +560,6 @@
         private System.Windows.Forms.Panel pnlLeft;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel pnlZro;
-        private Lyquidity.UtilityLibrary.Controls.RulerControl rulerControl1;
-        private Lyquidity.UtilityLibrary.Controls.RulerControl hrulerControl;
     }
 }
 

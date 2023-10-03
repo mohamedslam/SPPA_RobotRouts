@@ -34,10 +34,10 @@ namespace WinApp_GraphicInterface.Forms.DrawAreaPlan
         {
             AreaProperites = areaProperites;            
             InitializeComponent();
-           // pnlCanvas.Width = (int)areaProperites.Width;
-           // pnlCanvas.Height = (int)areaProperites.Height;
+           //pnlCanvas.Width = (int)areaProperites.Width;
+           //pnlCanvas.Height = (int)areaProperites.Height;
 
-           // pnlCanvas.AutoScrollMinSize = new Size(pnlCanvas.Width, pnlCanvas.Height);
+            pnlCanvas.AutoScrollMinSize = new Size(pnlCanvas.Width, pnlCanvas.Height);
 
             traceListener = new Class.DrawArea.TraceListener();
             Trace.Listeners.Add(traceListener);
@@ -420,5 +420,9 @@ namespace WinApp_GraphicInterface.Forms.DrawAreaPlan
             }
         }
 
+        private void FlowSharpUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
