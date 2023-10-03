@@ -125,10 +125,33 @@ namespace FlowSharpLib
 			CreateGraphicsObjects();
 		}
 
-		protected void CreateBitmap()
+//        Knowing that you can calcuate the largest bitmap you can create.
+
+//The max is object size is 2GB:2,147,483,648
+//Default bitmap is 32bpp(4 bytes), the largest area we can have is 2GB / 4 = 536,870,912
+//If we want a square, the largest we can get is sqrt(2GB/4) = 23,170
+//So the following code works fine:
+
+//Bitmap b = new Bitmap(23170, 23170);
+//        But the following fails:
+
+//Bitmap b = new Bitmap(23171, 23170);
+//        If you want to store an image with larger dimensions, you would have to change the pixel format to a lower number of bpp:
+
+//Bitmap b = new Bitmap(65535, 65535, PixelFormat.Format4bppIndexed);
+        protected void CreateBitmap()
         {
-            bitmap = new Bitmap(ClientSize.Width, ClientSize.Height);
-			CreateGraphicsObjects();
+            try
+            {
+               bitmap = new Bitmap(ClientSize.Width, ClientSize.Height);
+                 // bitmap = new Bitmap(23170, 23170);
+                CreateGraphicsObjects();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+         
         }
 
 		protected void CreateGraphicsObjects()
@@ -137,16 +160,16 @@ namespace FlowSharpLib
 			antiAliasGraphics = Graphics.FromImage(bitmap);
 			antiAliasGraphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 		}
-        int i = 0;
+      
 		protected void OnPaint(object sender, PaintEventArgs e)
         {
             Graphics gr = Graphics;
             DrawBackground(gr);
-            if(i==0)
+           
             DrawGrid(gr);
             PaintComplete(this);
             e.Graphics.DrawImage(bitmap, origin);
-            i++;
+           
         }
 
         protected virtual void DrawBackground(Graphics gr)
@@ -162,6 +185,8 @@ namespace FlowSharpLib
         /// <param name="gr">object control graphic which will display Grid Area </param>
         protected virtual void DrawGrid(Graphics gr)
         {
+            GridCoordinatesVerticalPoints.Clear();
+            GridCoordinatesHorizontalPoints.Clear();
             DrawVerticalGridLines(gr);
             DrawHorizontalGridLines(gr);
             DrawCardinatsPoints(gr);
@@ -229,6 +254,7 @@ namespace FlowSharpLib
         {            
             Pen gridPenVertical = penDashProperites(Color.LightBlue, 0.5f, 3, 2, 1);
             gr.DrawLine(gridPenVertical, fromPoint, toPoint);
+        
             GridCoordinatesVerticalPoints.Add(fromPoint);
         }
 
@@ -236,6 +262,7 @@ namespace FlowSharpLib
         {           
             Pen gridPenHorizntal = penDashProperites(Color.DeepSkyBlue, 1f, 3,2,1);
             gr.DrawLine(gridPenHorizntal, fromPoint, toPoint);
+          
             GridCoordinatesHorizontalPoints.Add(fromPoint);
         }
 
