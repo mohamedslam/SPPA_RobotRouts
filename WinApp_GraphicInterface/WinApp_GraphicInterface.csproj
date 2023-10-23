@@ -176,8 +176,20 @@
     <EmbeddedResource Include="Forms\Area\frmAreaProperites.resx">
       <DependentUpon>frmAreaProperites.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainApp.resx">
       <DependentUpon>frmMainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Robots\frmAddRobot.resx">
+      <DependentUpon>frmAddRobot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Robots\frmRobotData.resx">
+      <DependentUpon>frmRobotData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Routes\frmRouteCommand.resx">
       <DependentUpon>frmRouteCommand.cs</DependentUpon>
