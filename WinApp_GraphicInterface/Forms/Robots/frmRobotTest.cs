@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinApp_GraphicInterface.Forms.Robots
 {
-    public partial class frmProperites : Form
+    public partial class frmRobotTest : Form
     {
-        public frmProperites()
+        public frmRobotTest()
         {
             InitializeComponent();
         }
