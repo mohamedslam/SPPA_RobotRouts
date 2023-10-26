@@ -16,5 +16,10 @@ namespace WinApp_GraphicInterface.Forms.Routes
         {
             InitializeComponent();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
