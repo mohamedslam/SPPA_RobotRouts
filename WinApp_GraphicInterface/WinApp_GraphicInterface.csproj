@@ -132,11 +132,11 @@
     <Compile Include="Forms\Robots\frmAddRobot.Designer.cs">
       <DependentUpon>frmAddRobot.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Robots\frmProperites.cs">
+    <Compile Include="Forms\Robots\frmRobotTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Robots\frmProperites.Designer.cs">
-      <DependentUpon>frmProperites.cs</DependentUpon>
+    <Compile Include="Forms\Robots\frmRobotTest.Designer.cs">
+      <DependentUpon>frmRobotTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Robots\frmRobotData.cs">
       <SubType>Form</SubType>
@@ -190,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Robots\frmAddRobot.resx">
       <DependentUpon>frmAddRobot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Robots\frmRobotTest.resx">
+      <DependentUpon>frmRobotTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Robots\frmRobotData.resx">
       <DependentUpon>frmRobotData.cs</DependentUpon>
