@@ -242,5 +242,17 @@
   <ItemGroup>
     <None Include="Resources\Area.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardinators.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-maine-drone-society-robot-unmanned-aerial-vehicle-autonomous-car-odometry-robot-angle-electronics-vehicle-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-robotics-computer-technology-robotics-3d-computer-graphics-computer-engineering-thumbnail.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
