@@ -41,58 +41,58 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtMsg = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxSender = new System.Windows.Forms.TextBox();
             this.richTextBoxDataReceived = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxDataSent = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRefreshServerIp = new System.Windows.Forms.Button();
             this.cmbtxtServerIps = new System.Windows.Forms.ComboBox();
             this.txthostName = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.trackSpeed = new System.Windows.Forms.TrackBar();
             this.lblSpeedValue = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnSelfLeft = new System.Windows.Forms.Button();
+            this.btnforward = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnSelfRight = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblSensorF = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblSensorR = new System.Windows.Forms.Label();
+            this.lblSensorL = new System.Windows.Forms.Label();
+            this.lblSensorB = new System.Windows.Forms.Label();
+            this.btnRout = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnCam = new System.Windows.Forms.Button();
+            this.lblWifiStrength = new System.Windows.Forms.Label();
+            this.lblBataryStrength = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSelfLeft = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnRight = new System.Windows.Forms.Button();
-            this.btnSelfRight = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.btnforward = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblBataryStrength = new System.Windows.Forms.Label();
-            this.lblWifiStrength = new System.Windows.Forms.Label();
-            this.lblSensorF = new System.Windows.Forms.Label();
-            this.lblSensorL = new System.Windows.Forms.Label();
-            this.lblSensorB = new System.Windows.Forms.Label();
-            this.lblSensorR = new System.Windows.Forms.Label();
-            this.btnCam = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.richTextBoxDataSent = new System.Windows.Forms.RichTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnRout = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSendData
@@ -221,6 +221,40 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recived Data";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(1107, 29);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 20);
+            this.checkBox1.TabIndex = 26;
+            this.checkBox1.Text = "Scrol";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 31);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "From:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(161, 29);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(188, 22);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Text = "Sallam1";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // textBoxSender
             // 
             this.textBoxSender.Location = new System.Drawing.Point(53, 28);
@@ -278,6 +312,20 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Send Data";
             // 
+            // richTextBoxDataSent
+            // 
+            this.richTextBoxDataSent.BackColor = System.Drawing.Color.MidnightBlue;
+            this.richTextBoxDataSent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richTextBoxDataSent.ForeColor = System.Drawing.Color.White;
+            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 45);
+            this.richTextBoxDataSent.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBoxDataSent.MaxLength = 2;
+            this.richTextBoxDataSent.Name = "richTextBoxDataSent";
+            this.richTextBoxDataSent.ReadOnly = true;
+            this.richTextBoxDataSent.Size = new System.Drawing.Size(657, 144);
+            this.richTextBoxDataSent.TabIndex = 24;
+            this.richTextBoxDataSent.Text = "";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -298,8 +346,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRefreshServerIp.Name = "btnRefreshServerIp";
             this.btnRefreshServerIp.Size = new System.Drawing.Size(42, 45);
             this.btnRefreshServerIp.TabIndex = 5;
-            this.btnRefreshServerIp.UseVisualStyleBackColor = true;
-            this.btnRefreshServerIp.Click += new System.EventHandler(this.btnRefreshServerIp_Click);
+            this.btnRefreshServerIp.UseVisualStyleBackColor = true; 
             // 
             // cmbtxtServerIps
             // 
@@ -339,6 +386,18 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Send Control";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.trackSpeed);
+            this.groupBox6.Controls.Add(this.lblSpeedValue);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox6.Location = new System.Drawing.Point(3, 282);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(578, 58);
+            this.groupBox6.TabIndex = 16;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Speed";
+            // 
             // trackSpeed
             // 
             this.trackSpeed.Dock = System.Windows.Forms.DockStyle.Left;
@@ -354,13 +413,284 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSpeedValue.AutoSize = true;
             this.lblSpeedValue.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblSpeedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSpeedValue.Location = new System.Drawing.Point(539, 18);
+            this.lblSpeedValue.Location = new System.Drawing.Point(557, 18);
             this.lblSpeedValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpeedValue.Name = "lblSpeedValue";
-            this.lblSpeedValue.Size = new System.Drawing.Size(36, 20);
+            this.lblSpeedValue.Size = new System.Drawing.Size(18, 20);
             this.lblSpeedValue.TabIndex = 2;
-            this.lblSpeedValue.Text = "255";
+            this.lblSpeedValue.Text = "1";
             this.lblSpeedValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnSelfLeft);
+            this.groupBox5.Controls.Add(this.btnforward);
+            this.groupBox5.Controls.Add(this.btnLeft);
+            this.groupBox5.Controls.Add(this.btnBack);
+            this.groupBox5.Controls.Add(this.btnSelfRight);
+            this.groupBox5.Controls.Add(this.btnRight);
+            this.groupBox5.Controls.Add(this.btnStop);
+            this.groupBox5.Location = new System.Drawing.Point(344, 87);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(230, 190);
+            this.groupBox5.TabIndex = 15;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Movment";
+            // 
+            // btnSelfLeft
+            // 
+            this.btnSelfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelfLeft.ImageKey = "SelfLeft.png";
+            this.btnSelfLeft.ImageList = this.imageList1;
+            this.btnSelfLeft.Location = new System.Drawing.Point(18, 30);
+            this.btnSelfLeft.Name = "btnSelfLeft";
+            this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
+            this.btnSelfLeft.TabIndex = 4;
+            this.btnSelfLeft.UseVisualStyleBackColor = true;
+            this.btnSelfLeft.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnforward
+            // 
+            this.btnforward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnforward.ImageKey = "forward.png";
+            this.btnforward.ImageList = this.imageList1;
+            this.btnforward.Location = new System.Drawing.Point(86, 23);
+            this.btnforward.Name = "btnforward";
+            this.btnforward.Size = new System.Drawing.Size(55, 50);
+            this.btnforward.TabIndex = 4;
+            this.btnforward.UseVisualStyleBackColor = true;
+            this.btnforward.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLeft.ImageKey = "left.png";
+            this.btnLeft.ImageList = this.imageList1;
+            this.btnLeft.Location = new System.Drawing.Point(18, 78);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(55, 50);
+            this.btnLeft.TabIndex = 4;
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ImageKey = "Back.png";
+            this.btnBack.ImageList = this.imageList1;
+            this.btnBack.Location = new System.Drawing.Point(86, 133);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(55, 50);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnSelfRight
+            // 
+            this.btnSelfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelfRight.ImageKey = "SelfRight.png";
+            this.btnSelfRight.ImageList = this.imageList1;
+            this.btnSelfRight.Location = new System.Drawing.Point(169, 28);
+            this.btnSelfRight.Name = "btnSelfRight";
+            this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
+            this.btnSelfRight.TabIndex = 4;
+            this.btnSelfRight.UseVisualStyleBackColor = true;
+            this.btnSelfRight.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnRight
+            // 
+            this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRight.ImageKey = "right.png";
+            this.btnRight.ImageList = this.imageList1;
+            this.btnRight.Location = new System.Drawing.Point(154, 74);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(55, 50);
+            this.btnRight.TabIndex = 4;
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.ImageKey = "Stop.png";
+            this.btnStop.ImageList = this.imageList1;
+            this.btnStop.Location = new System.Drawing.Point(86, 77);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(55, 50);
+            this.btnStop.TabIndex = 4;
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnOriantation_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.lblSensorF);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.lblSensorR);
+            this.groupBox1.Controls.Add(this.lblSensorL);
+            this.groupBox1.Controls.Add(this.lblSensorB);
+            this.groupBox1.Location = new System.Drawing.Point(19, 87);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(249, 188);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sensors";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::WinApp_GraphicInterface.Properties.Resources.png_transparent_maine_drone_society_robot_unmanned_aerial_vehicle_autonomous_car_odometry_robot_angle_electronics_vehicle_thumbnail;
+            this.pictureBox2.Location = new System.Drawing.Point(81, 63);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(93, 81);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblSensorF
+            // 
+            this.lblSensorF.AutoSize = true;
+            this.lblSensorF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorF.Location = new System.Drawing.Point(95, 17);
+            this.lblSensorF.Name = "lblSensorF";
+            this.lblSensorF.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorF.TabIndex = 11;
+            this.lblSensorF.Text = "+100 cm";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(42, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 16);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "+100 cm";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label11.Location = new System.Drawing.Point(145, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 16);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "+100 cm";
+            // 
+            // lblSensorR
+            // 
+            this.lblSensorR.AutoSize = true;
+            this.lblSensorR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorR.Location = new System.Drawing.Point(177, 97);
+            this.lblSensorR.Name = "lblSensorR";
+            this.lblSensorR.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorR.TabIndex = 11;
+            this.lblSensorR.Text = "+100 cm";
+            // 
+            // lblSensorL
+            // 
+            this.lblSensorL.AutoSize = true;
+            this.lblSensorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorL.Location = new System.Drawing.Point(11, 96);
+            this.lblSensorL.Name = "lblSensorL";
+            this.lblSensorL.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorL.TabIndex = 11;
+            this.lblSensorL.Text = "+100 cm";
+            // 
+            // lblSensorB
+            // 
+            this.lblSensorB.AutoSize = true;
+            this.lblSensorB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorB.Location = new System.Drawing.Point(96, 154);
+            this.lblSensorB.Name = "lblSensorB";
+            this.lblSensorB.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorB.TabIndex = 11;
+            this.lblSensorB.Text = "+100 cm";
+            // 
+            // btnRout
+            // 
+            this.btnRout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRout.ImageKey = "Route.png";
+            this.btnRout.ImageList = this.imageList1;
+            this.btnRout.Location = new System.Drawing.Point(274, 224);
+            this.btnRout.Name = "btnRout";
+            this.btnRout.Size = new System.Drawing.Size(61, 53);
+            this.btnRout.TabIndex = 13;
+            this.btnRout.UseVisualStyleBackColor = true;
+            this.btnRout.Click += new System.EventHandler(this.btnRout_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ImageKey = "home.png";
+            this.btnHome.ImageList = this.imageList1;
+            this.btnHome.Location = new System.Drawing.Point(274, 93);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(61, 53);
+            this.btnHome.TabIndex = 13;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnCam
+            // 
+            this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCam.ImageKey = "cam.png";
+            this.btnCam.ImageList = this.imageList1;
+            this.btnCam.Location = new System.Drawing.Point(499, 21);
+            this.btnCam.Name = "btnCam";
+            this.btnCam.Size = new System.Drawing.Size(75, 56);
+            this.btnCam.TabIndex = 12;
+            this.btnCam.UseVisualStyleBackColor = true;
+            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
+            // 
+            // lblWifiStrength
+            // 
+            this.lblWifiStrength.AutoSize = true;
+            this.lblWifiStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblWifiStrength.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblWifiStrength.Location = new System.Drawing.Point(140, 40);
+            this.lblWifiStrength.Name = "lblWifiStrength";
+            this.lblWifiStrength.Size = new System.Drawing.Size(36, 16);
+            this.lblWifiStrength.TabIndex = 11;
+            this.lblWifiStrength.Text = "7/10";
+            // 
+            // lblBataryStrength
+            // 
+            this.lblBataryStrength.AutoSize = true;
+            this.lblBataryStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblBataryStrength.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblBataryStrength.Location = new System.Drawing.Point(315, 39);
+            this.lblBataryStrength.Name = "lblBataryStrength";
+            this.lblBataryStrength.Size = new System.Drawing.Size(36, 16);
+            this.lblBataryStrength.TabIndex = 11;
+            this.lblBataryStrength.Text = "90%";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label9.Location = new System.Drawing.Point(190, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Batary";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label8.Location = new System.Drawing.Point(15, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 20);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Wifi Strength";
             // 
             // label5
             // 
@@ -397,90 +727,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSelfLeft
-            // 
-            this.btnSelfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelfLeft.ImageKey = "SelfLeft.png";
-            this.btnSelfLeft.ImageList = this.imageList1;
-            this.btnSelfLeft.Location = new System.Drawing.Point(18, 30);
-            this.btnSelfLeft.Name = "btnSelfLeft";
-            this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
-            this.btnSelfLeft.TabIndex = 4;
-            this.btnSelfLeft.UseVisualStyleBackColor = true;
-            this.btnSelfLeft.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnStop
-            // 
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.ImageKey = "Stop.png";
-            this.btnStop.ImageList = this.imageList1;
-            this.btnStop.Location = new System.Drawing.Point(86, 77);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(55, 50);
-            this.btnStop.TabIndex = 4;
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnRight
-            // 
-            this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRight.ImageKey = "right.png";
-            this.btnRight.ImageList = this.imageList1;
-            this.btnRight.Location = new System.Drawing.Point(154, 74);
-            this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(55, 50);
-            this.btnRight.TabIndex = 4;
-            this.btnRight.UseVisualStyleBackColor = true;
-            this.btnRight.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnSelfRight
-            // 
-            this.btnSelfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelfRight.ImageKey = "SelfRight.png";
-            this.btnSelfRight.ImageList = this.imageList1;
-            this.btnSelfRight.Location = new System.Drawing.Point(169, 28);
-            this.btnSelfRight.Name = "btnSelfRight";
-            this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
-            this.btnSelfRight.TabIndex = 4;
-            this.btnSelfRight.UseVisualStyleBackColor = true;
-            this.btnSelfRight.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.ImageKey = "Back.png";
-            this.btnBack.ImageList = this.imageList1;
-            this.btnBack.Location = new System.Drawing.Point(86, 133);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(55, 50);
-            this.btnBack.TabIndex = 4;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnLeft
-            // 
-            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeft.ImageKey = "left.png";
-            this.btnLeft.ImageList = this.imageList1;
-            this.btnLeft.Location = new System.Drawing.Point(18, 78);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(55, 50);
-            this.btnLeft.TabIndex = 4;
-            this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
-            // btnforward
-            // 
-            this.btnforward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnforward.ImageKey = "forward.png";
-            this.btnforward.ImageList = this.imageList1;
-            this.btnforward.Location = new System.Drawing.Point(86, 23);
-            this.btnforward.Name = "btnforward";
-            this.btnforward.Size = new System.Drawing.Size(55, 50);
-            this.btnforward.TabIndex = 4;
-            this.btnforward.UseVisualStyleBackColor = true;
-            this.btnforward.Click += new System.EventHandler(this.btnOriantation_Click);
-            // 
             // btnConnect
             // 
             this.btnConnect.BackColor = System.Drawing.Color.Transparent;
@@ -494,250 +740,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.TabIndex = 0;
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 31);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "From:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::WinApp_GraphicInterface.Properties.Resources.png_transparent_maine_drone_society_robot_unmanned_aerial_vehicle_autonomous_car_odometry_robot_angle_electronics_vehicle_thumbnail;
-            this.pictureBox2.Location = new System.Drawing.Point(81, 63);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 81);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label8.Location = new System.Drawing.Point(15, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Wifi Strength";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label9.Location = new System.Drawing.Point(190, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Batary";
-            // 
-            // lblBataryStrength
-            // 
-            this.lblBataryStrength.AutoSize = true;
-            this.lblBataryStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblBataryStrength.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblBataryStrength.Location = new System.Drawing.Point(315, 39);
-            this.lblBataryStrength.Name = "lblBataryStrength";
-            this.lblBataryStrength.Size = new System.Drawing.Size(36, 16);
-            this.lblBataryStrength.TabIndex = 11;
-            this.lblBataryStrength.Text = "90%";
-            // 
-            // lblWifiStrength
-            // 
-            this.lblWifiStrength.AutoSize = true;
-            this.lblWifiStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblWifiStrength.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblWifiStrength.Location = new System.Drawing.Point(140, 40);
-            this.lblWifiStrength.Name = "lblWifiStrength";
-            this.lblWifiStrength.Size = new System.Drawing.Size(36, 16);
-            this.lblWifiStrength.TabIndex = 11;
-            this.lblWifiStrength.Text = "7/10";
-            // 
-            // lblSensorF
-            // 
-            this.lblSensorF.AutoSize = true;
-            this.lblSensorF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSensorF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorF.Location = new System.Drawing.Point(95, 17);
-            this.lblSensorF.Name = "lblSensorF";
-            this.lblSensorF.Size = new System.Drawing.Size(63, 16);
-            this.lblSensorF.TabIndex = 11;
-            this.lblSensorF.Text = "+100 cm";
-            // 
-            // lblSensorL
-            // 
-            this.lblSensorL.AutoSize = true;
-            this.lblSensorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSensorL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorL.Location = new System.Drawing.Point(11, 96);
-            this.lblSensorL.Name = "lblSensorL";
-            this.lblSensorL.Size = new System.Drawing.Size(63, 16);
-            this.lblSensorL.TabIndex = 11;
-            this.lblSensorL.Text = "+100 cm";
-            // 
-            // lblSensorB
-            // 
-            this.lblSensorB.AutoSize = true;
-            this.lblSensorB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSensorB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorB.Location = new System.Drawing.Point(96, 154);
-            this.lblSensorB.Name = "lblSensorB";
-            this.lblSensorB.Size = new System.Drawing.Size(63, 16);
-            this.lblSensorB.TabIndex = 11;
-            this.lblSensorB.Text = "+100 cm";
-            // 
-            // lblSensorR
-            // 
-            this.lblSensorR.AutoSize = true;
-            this.lblSensorR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSensorR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorR.Location = new System.Drawing.Point(177, 97);
-            this.lblSensorR.Name = "lblSensorR";
-            this.lblSensorR.Size = new System.Drawing.Size(63, 16);
-            this.lblSensorR.TabIndex = 11;
-            this.lblSensorR.Text = "+100 cm";
-            // 
-            // btnCam
-            // 
-            this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCam.ImageKey = "cam.png";
-            this.btnCam.ImageList = this.imageList1;
-            this.btnCam.Location = new System.Drawing.Point(499, 21);
-            this.btnCam.Name = "btnCam";
-            this.btnCam.Size = new System.Drawing.Size(75, 56);
-            this.btnCam.TabIndex = 12;
-            this.btnCam.UseVisualStyleBackColor = true;
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.ImageKey = "home.png";
-            this.btnHome.ImageList = this.imageList1;
-            this.btnHome.Location = new System.Drawing.Point(274, 93);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(61, 53);
-            this.btnHome.TabIndex = 13;
-            this.btnHome.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(161, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Sallam1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(42, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 16);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "+100 cm";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(145, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 16);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "+100 cm";
-            // 
-            // richTextBoxDataSent
-            // 
-            this.richTextBoxDataSent.BackColor = System.Drawing.Color.MidnightBlue;
-            this.richTextBoxDataSent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richTextBoxDataSent.ForeColor = System.Drawing.Color.White;
-            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 45);
-            this.richTextBoxDataSent.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBoxDataSent.MaxLength = 2;
-            this.richTextBoxDataSent.Name = "richTextBoxDataSent";
-            this.richTextBoxDataSent.ReadOnly = true;
-            this.richTextBoxDataSent.Size = new System.Drawing.Size(657, 144);
-            this.richTextBoxDataSent.TabIndex = 24;
-            this.richTextBoxDataSent.Text = "";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(1107, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 20);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Scrol";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.lblSensorF);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.lblSensorR);
-            this.groupBox1.Controls.Add(this.lblSensorL);
-            this.groupBox1.Controls.Add(this.lblSensorB);
-            this.groupBox1.Location = new System.Drawing.Point(19, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 188);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sensors";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btnSelfLeft);
-            this.groupBox5.Controls.Add(this.btnforward);
-            this.groupBox5.Controls.Add(this.btnLeft);
-            this.groupBox5.Controls.Add(this.btnBack);
-            this.groupBox5.Controls.Add(this.btnSelfRight);
-            this.groupBox5.Controls.Add(this.btnRight);
-            this.groupBox5.Controls.Add(this.btnStop);
-            this.groupBox5.Location = new System.Drawing.Point(344, 87);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(230, 190);
-            this.groupBox5.TabIndex = 15;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Movment";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.trackSpeed);
-            this.groupBox6.Controls.Add(this.lblSpeedValue);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(3, 282);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(578, 58);
-            this.groupBox6.TabIndex = 16;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Speed";
-            // 
-            // btnRout
-            // 
-            this.btnRout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRout.ImageKey = "Route.png";
-            this.btnRout.ImageList = this.imageList1;
-            this.btnRout.Location = new System.Drawing.Point(274, 224);
-            this.btnRout.Name = "btnRout";
-            this.btnRout.Size = new System.Drawing.Size(61, 53);
-            this.btnRout.TabIndex = 13;
-            this.btnRout.UseVisualStyleBackColor = true;
             // 
             // frmRobotTest
             // 
@@ -761,7 +763,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRobotTest";
-            this.Text = "Robot test";
+            this.Text = "Robot Test Send and Recived Data";
             this.Load += new System.EventHandler(this.frmRobotTest_Load_1);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -769,14 +771,14 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
