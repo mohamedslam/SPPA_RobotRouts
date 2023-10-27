@@ -125,5 +125,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             SendCommand(command);
 
         }
+
+        
     }
 }
