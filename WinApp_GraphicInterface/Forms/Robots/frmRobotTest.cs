@@ -1,5 +1,4 @@
-﻿using Chilkat;
-using CsvHelper;
+﻿using CsvHelper;
 using SPPA.Models.RobotModels;
 using System;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ using System.Windows.Forms;
             InitializeComponent();
         }
 
-
+        RecivedDataRobotModel recivedDataModel;
         string data = "";
         string date = "";
 
@@ -61,45 +60,36 @@ using System.Windows.Forms;
 
                 ));
             }
-
-
-
         }
-        RecivedDataRobotModel recivedDataModel;
+      
         void AnalyzingDataRecivedFromRobots(string msgdata)
         {
-            msgdata =
-                  "RealdateTime:11:21:53:777;" +
-                  "RobotName:Sallam1;" +
-                  "Batary:100volt;" +
-                  "Wifi:50dBm;" +
-                  "Sensor:FM30,FR10,FL20,R40,L50,B60;" +
-                  "Movment:X1200,Y1400,S155,F9999,R1234,RS10,L10,LS20,B600,H0;" +
-                  "Cam:Pic_imageName,Pix600,800;" +
-                  "Status:Home;" +
-                  "5997;1909.873";
+            //msgdata =
+            //      "RealdateTime:11:21:53:777;" +
+            //      "RobotName:Sallam1;" +
+            //      "Batary:100volt;" +
+            //      "Wifi:50dBm;" +
+            //      "Sensor:FM30,FR10,FL20,R40,L50,B60;" +
+            //      "Movment:X1200,Y1400,S155,F9999,R1234,RS10,L10,LS20,B600,H0;" +
+            //      "Camera:Pic_imageName,600,800;" +
+            //      "Status:Home;" +
+            //      "5997;1909.873";
 
-            recivedDataModel = ReadLine(msgdata, ';');
-            
+            recivedDataModel = new RecivedDataRobotModel(msgdata);
+            txtRobotName.Text = recivedDataModel.NameModel.Name;
+            lblBataryStrength.Text = recivedDataModel.BattaryModel.BattaryHealthy;
+            lblWifiStrength.Text = recivedDataModel.WifiModel.Stringth;
+            lblSpeedValue.Text = recivedDataModel.MovmentModel.Speed.ToString();
+           // trackSpeed.Value = recivedDataModel.MovmentModel.Speed;
+            lblSensorF.Text = recivedDataModel.SensorModel.SensorForwardMidel;
+            lblSensorFR.Text = recivedDataModel.SensorModel.SensorForwardRight;
+            lblSensorFL.Text = recivedDataModel.SensorModel.SensorForwardLeft;
+            lblSensorR.Text = recivedDataModel.SensorModel.SensorRight;
+            lblSensorL.Text = recivedDataModel.SensorModel.SensorLeft;
+            lblSensorB.Text = recivedDataModel.SensorModel.SensorBehindMidel;
         }
-         public   RecivedDataRobotModel ReadLine(string dataline,char sperated) {            
-                    var values = dataline.Split(sperated);
-                    var model = new RecivedDataRobotModel
-                    {
-                        RealServerDateTime = values[0],
-                        RobotName = values[1],
-                        Battary = values[2],
-                        Wifi = values[3],
-                        Sensor = values[4],
-                        Movment = values[5],
-                        Camera = values[6],
-                        Status = values[7],
-                        RealRobotDateTime = values[8],
-                    };
+  
 
-                  return model;
-            }
-        
         public static List<RecivedDataRobotModel> ReadCSVDataFromFile(string filePath)
         {
             List<RecivedDataRobotModel> records;
@@ -120,6 +110,15 @@ using System.Windows.Forms;
             udpClient.Connect(txtRobotIP.Text, Convert.ToInt16(txtPort.Text));
             Byte[] senddata = Encoding.ASCII.GetBytes(command);
             udpClient.Send(senddata, senddata.Length);
+            richTextBoxDataSent.AppendText(command + "\n");
+            if (checkBox1.Checked == true)
+            {
+                richTextBoxDataSent.ScrollToCaret();
+            }
+            else
+            {
+                richTextBoxDataSent.ScrollBars = RichTextBoxScrollBars.None;
+            }
         }
 
       
@@ -138,9 +137,7 @@ using System.Windows.Forms;
         private void btnSendData_Click(object sender, EventArgs e)
         {
             SendCommand(txtMsg.Text);
-        }
-
-       
+        }       
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -170,28 +167,41 @@ using System.Windows.Forms;
         {
             myIP();
         }
-
         
         private void btnOriantation_Click(object sender, EventArgs e)
         {
-            var btnOriantation= (System.Windows.Forms.Button)sender;
+            var btnOriantation= (Button)sender;
             string command = btnOriantation.Name.ToLower().Replace("btn","");            
             SendCommand(command);
         }
 
+   
+
+        private void btnClearRecived_Click(object sender, EventArgs e)
+        {
+            richTextBoxDataReceived.Clear();
+        }
+
+        private void btnClearSent_Click(object sender, EventArgs e)
+        {
+            richTextBoxDataSent.Clear();
+        } 
         private void btnCam_Click(object sender, EventArgs e)
         {
-
+            SendCommand("takePic");
+            MessageBox.Show("I wait Shipment of My cam");
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRout_Click(object sender, EventArgs e)
-        {
-
+            if (checkBox1.Checked == true)
+            {
+                richTextBoxDataSent.ScrollToCaret();
+            }
+            else
+            {
+                richTextBoxDataSent.ScrollBars= RichTextBoxScrollBars.None;
+            }
         }
     }
 }

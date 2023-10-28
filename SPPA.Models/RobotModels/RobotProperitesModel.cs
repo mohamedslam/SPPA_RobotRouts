@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SPPA.Models.RobotModels.RobotProperitesModels;
 
 namespace SPPA.Models.RobotModels
 {
-   public class RobotProperitesModel
+    public class RobotProperitesModel
     {
         public string RobotName { get; set; }
         public VSRModel RobotSpeed { get; set; }

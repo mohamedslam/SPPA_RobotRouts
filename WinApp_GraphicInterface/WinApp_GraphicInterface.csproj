@@ -36,9 +36,6 @@
     <StartupObject>WinApp_GraphicInterface.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChilkatDotNet47, Version=9.5.0.95, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=AMD64">
-      <HintPath>..\packages\chilkat-x64.9.5.0.95\lib\net472\ChilkatDotNet47.dll</HintPath>
-    </Reference>
     <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
       <HintPath>..\packages\CsvHelper.30.0.1\lib\net47\CsvHelper.dll</HintPath>
     </Reference>

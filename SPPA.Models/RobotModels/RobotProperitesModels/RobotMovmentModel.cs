@@ -15,6 +15,6 @@ namespace SPPA.Models.RobotModels.RobotProperitesModels
         public string LeftStep { get; set; }
         public string RighSelftStep { get; set; }
         public string LeftSelfStep { get; set; }
-        public float Degree { get; set; }
+        public string Degree { get; set; }
     }
 }

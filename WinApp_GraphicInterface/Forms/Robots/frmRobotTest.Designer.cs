@@ -43,10 +43,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRobotName = new System.Windows.Forms.TextBox();
             this.textBoxSender = new System.Windows.Forms.TextBox();
             this.richTextBoxDataReceived = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClearRecived = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBoxDataSent = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,8 +68,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSensorF = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblSensorFL = new System.Windows.Forms.Label();
+            this.lblSensorFR = new System.Windows.Forms.Label();
             this.lblSensorR = new System.Windows.Forms.Label();
             this.lblSensorL = new System.Windows.Forms.Label();
             this.lblSensorB = new System.Windows.Forms.Label();
@@ -84,6 +84,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.btnClearSent = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -101,10 +102,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSendData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendData.ImageKey = "connect.png";
             this.btnSendData.ImageList = this.imageList1;
-            this.btnSendData.Location = new System.Drawing.Point(4, 211);
+            this.btnSendData.Location = new System.Drawing.Point(4, 218);
             this.btnSendData.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendData.Name = "btnSendData";
-            this.btnSendData.Size = new System.Drawing.Size(657, 41);
+            this.btnSendData.Size = new System.Drawing.Size(852, 41);
             this.btnSendData.TabIndex = 0;
             this.btnSendData.Text = "Send";
             this.btnSendData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -175,7 +176,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(447, 23);
+            this.txtPort.Location = new System.Drawing.Point(548, 24);
             this.txtPort.Margin = new System.Windows.Forms.Padding(4);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(37, 22);
@@ -188,17 +189,17 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.statusStrip1.Location = new System.Drawing.Point(0, 795);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1250, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1444, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // txtMsg
             // 
             this.txtMsg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtMsg.Location = new System.Drawing.Point(4, 189);
+            this.txtMsg.Location = new System.Drawing.Point(4, 196);
             this.txtMsg.Margin = new System.Windows.Forms.Padding(4);
             this.txtMsg.Name = "txtMsg";
-            this.txtMsg.Size = new System.Drawing.Size(657, 22);
+            this.txtMsg.Size = new System.Drawing.Size(852, 22);
             this.txtMsg.TabIndex = 3;
             // 
             // groupBox2
@@ -206,17 +207,17 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtRobotName);
             this.groupBox2.Controls.Add(this.textBoxSender);
             this.groupBox2.Controls.Add(this.richTextBoxDataReceived);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnClearRecived);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Location = new System.Drawing.Point(0, 343);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1250, 452);
+            this.groupBox2.Size = new System.Drawing.Size(1444, 452);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recived Data";
@@ -227,12 +228,13 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(1107, 29);
+            this.checkBox1.Location = new System.Drawing.Point(1289, 28);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(56, 20);
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Scrol";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label7
             // 
@@ -244,16 +246,15 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label7.TabIndex = 25;
             this.label7.Text = "From:";
             // 
-            // textBox1
+            // txtRobotName
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Sallam1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRobotName.Location = new System.Drawing.Point(161, 29);
+            this.txtRobotName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRobotName.Name = "txtRobotName";
+            this.txtRobotName.ReadOnly = true;
+            this.txtRobotName.Size = new System.Drawing.Size(188, 22);
+            this.txtRobotName.TabIndex = 24;
+            this.txtRobotName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxSender
             // 
@@ -275,27 +276,28 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.richTextBoxDataReceived.MaxLength = 2;
             this.richTextBoxDataReceived.Name = "richTextBoxDataReceived";
             this.richTextBoxDataReceived.ReadOnly = true;
-            this.richTextBoxDataReceived.Size = new System.Drawing.Size(1242, 383);
+            this.richTextBoxDataReceived.Size = new System.Drawing.Size(1436, 383);
             this.richTextBoxDataReceived.TabIndex = 23;
             this.richTextBoxDataReceived.Text = "";
             // 
-            // button1
+            // btnClearRecived
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageKey = "delete.png";
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(1191, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 45);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClearRecived.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearRecived.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearRecived.ImageKey = "delete.png";
+            this.btnClearRecived.ImageList = this.imageList1;
+            this.btnClearRecived.Location = new System.Drawing.Point(1380, 12);
+            this.btnClearRecived.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearRecived.Name = "btnClearRecived";
+            this.btnClearRecived.Size = new System.Drawing.Size(51, 45);
+            this.btnClearRecived.TabIndex = 0;
+            this.btnClearRecived.UseVisualStyleBackColor = false;
+            this.btnClearRecived.Click += new System.EventHandler(this.btnClearRecived_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.btnClearSent);
             this.groupBox3.Controls.Add(this.richTextBoxDataSent);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.cmbRobotList);
@@ -303,11 +305,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txtMsg);
             this.groupBox3.Controls.Add(this.btnSendData);
-            this.groupBox3.Location = new System.Drawing.Point(0, 87);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 80);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(665, 256);
+            this.groupBox3.Size = new System.Drawing.Size(860, 263);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Send Data";
@@ -317,19 +320,19 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.richTextBoxDataSent.BackColor = System.Drawing.Color.MidnightBlue;
             this.richTextBoxDataSent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxDataSent.ForeColor = System.Drawing.Color.White;
-            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 45);
+            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 52);
             this.richTextBoxDataSent.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxDataSent.MaxLength = 2;
             this.richTextBoxDataSent.Name = "richTextBoxDataSent";
             this.richTextBoxDataSent.ReadOnly = true;
-            this.richTextBoxDataSent.Size = new System.Drawing.Size(657, 144);
+            this.richTextBoxDataSent.Size = new System.Drawing.Size(852, 144);
             this.richTextBoxDataSent.TabIndex = 24;
             this.richTextBoxDataSent.Text = "";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(260, 24);
+            this.label4.Location = new System.Drawing.Point(314, 24);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
@@ -341,28 +344,28 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRefreshServerIp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshServerIp.ImageKey = "refresh.png";
             this.btnRefreshServerIp.ImageList = this.imageList1;
-            this.btnRefreshServerIp.Location = new System.Drawing.Point(492, 24);
+            this.btnRefreshServerIp.Location = new System.Drawing.Point(596, 23);
             this.btnRefreshServerIp.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefreshServerIp.Name = "btnRefreshServerIp";
             this.btnRefreshServerIp.Size = new System.Drawing.Size(42, 45);
             this.btnRefreshServerIp.TabIndex = 5;
-            this.btnRefreshServerIp.UseVisualStyleBackColor = true; 
+            this.btnRefreshServerIp.UseVisualStyleBackColor = true;
             // 
             // cmbtxtServerIps
             // 
             this.cmbtxtServerIps.FormattingEnabled = true;
-            this.cmbtxtServerIps.Location = new System.Drawing.Point(331, 21);
+            this.cmbtxtServerIps.Location = new System.Drawing.Point(391, 21);
             this.cmbtxtServerIps.Name = "cmbtxtServerIps";
-            this.cmbtxtServerIps.Size = new System.Drawing.Size(109, 24);
+            this.cmbtxtServerIps.Size = new System.Drawing.Size(154, 24);
             this.cmbtxtServerIps.TabIndex = 7;
             // 
             // txthostName
             // 
-            this.txthostName.Location = new System.Drawing.Point(331, 46);
+            this.txthostName.Location = new System.Drawing.Point(391, 46);
             this.txthostName.Margin = new System.Windows.Forms.Padding(4);
             this.txthostName.Name = "txthostName";
             this.txthostName.ReadOnly = true;
-            this.txthostName.Size = new System.Drawing.Size(157, 22);
+            this.txthostName.Size = new System.Drawing.Size(194, 22);
             this.txthostName.TabIndex = 5;
             // 
             // groupBox4
@@ -379,7 +382,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox4.Location = new System.Drawing.Point(666, 0);
+            this.groupBox4.Location = new System.Drawing.Point(860, 0);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(584, 343);
             this.groupBox4.TabIndex = 8;
@@ -525,8 +528,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.lblSensorF);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.lblSensorFL);
+            this.groupBox1.Controls.Add(this.lblSensorFR);
             this.groupBox1.Controls.Add(this.lblSensorR);
             this.groupBox1.Controls.Add(this.lblSensorL);
             this.groupBox1.Controls.Add(this.lblSensorB);
@@ -541,7 +544,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::WinApp_GraphicInterface.Properties.Resources.png_transparent_maine_drone_society_robot_unmanned_aerial_vehicle_autonomous_car_odometry_robot_angle_electronics_vehicle_thumbnail;
-            this.pictureBox2.Location = new System.Drawing.Point(81, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(73, 63);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(93, 81);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -559,27 +562,27 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorF.TabIndex = 11;
             this.lblSensorF.Text = "+100 cm";
             // 
-            // label10
+            // lblSensorFL
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(42, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 16);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "+100 cm";
+            this.lblSensorFL.AutoSize = true;
+            this.lblSensorFL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorFL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorFL.Location = new System.Drawing.Point(42, 43);
+            this.lblSensorFL.Name = "lblSensorFL";
+            this.lblSensorFL.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorFL.TabIndex = 11;
+            this.lblSensorFL.Text = "+100 cm";
             // 
-            // label11
+            // lblSensorFR
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(145, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 16);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "+100 cm";
+            this.lblSensorFR.AutoSize = true;
+            this.lblSensorFR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSensorFR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSensorFR.Location = new System.Drawing.Point(145, 43);
+            this.lblSensorFR.Name = "lblSensorFR";
+            this.lblSensorFR.Size = new System.Drawing.Size(63, 16);
+            this.lblSensorFR.TabIndex = 11;
+            this.lblSensorFR.Text = "+100 cm";
             // 
             // lblSensorR
             // 
@@ -624,7 +627,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRout.Size = new System.Drawing.Size(61, 53);
             this.btnRout.TabIndex = 13;
             this.btnRout.UseVisualStyleBackColor = true;
-            this.btnRout.Click += new System.EventHandler(this.btnRout_Click);
+            this.btnRout.Click += new System.EventHandler(this.btnOriantation_Click);
             // 
             // btnHome
             // 
@@ -636,7 +639,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome.Size = new System.Drawing.Size(61, 53);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.btnOriantation_Click);
             // 
             // btnCam
             // 
@@ -695,7 +698,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 52);
+            this.label5.Location = new System.Drawing.Point(315, 50);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 16);
@@ -708,7 +711,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(81, 22);
+            this.label6.Location = new System.Drawing.Point(92, 22);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 38);
@@ -733,7 +736,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.ImageKey = "WiFi.png";
             this.btnConnect.ImageList = this.imageList1;
-            this.btnConnect.Location = new System.Drawing.Point(585, 24);
+            this.btnConnect.Location = new System.Drawing.Point(799, 20);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(53, 48);
@@ -741,12 +744,27 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
+            // btnClearSent
+            // 
+            this.btnClearSent.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSent.ImageKey = "delete.png";
+            this.btnClearSent.ImageList = this.imageList1;
+            this.btnClearSent.Location = new System.Drawing.Point(801, 12);
+            this.btnClearSent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearSent.Name = "btnClearSent";
+            this.btnClearSent.Size = new System.Drawing.Size(51, 39);
+            this.btnClearSent.TabIndex = 25;
+            this.btnClearSent.UseVisualStyleBackColor = false;
+            this.btnClearSent.Click += new System.EventHandler(this.btnClearSent_Click);
+            // 
             // frmRobotTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1250, 817);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1444, 817);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txthostName);
             this.Controls.Add(this.cmbtxtServerIps);
             this.Controls.Add(this.label5);
@@ -756,7 +774,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.Controls.Add(this.btnRefreshServerIp);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
@@ -796,7 +813,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.TextBox txtMsg;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClearRecived;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRefreshServerIp;
@@ -830,14 +847,15 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.Label lblWifiStrength;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnCam;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtRobotName;
+        private System.Windows.Forms.Label lblSensorFR;
+        private System.Windows.Forms.Label lblSensorFL;
         private System.Windows.Forms.RichTextBox richTextBoxDataSent;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRout;
+        private System.Windows.Forms.Button btnClearSent;
     }
 }
