@@ -41,13 +41,15 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtMsg = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtRobotName = new System.Windows.Forms.TextBox();
             this.textBoxSender = new System.Windows.Forms.TextBox();
             this.richTextBoxDataReceived = new System.Windows.Forms.RichTextBox();
             this.btnClearRecived = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClearSent = new System.Windows.Forms.Button();
             this.richTextBoxDataSent = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRefreshServerIp = new System.Windows.Forms.Button();
@@ -84,7 +86,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.btnClearSent = new System.Windows.Forms.Button();
+            this.btnSelfBackLeft = new System.Windows.Forms.Button();
+            this.btnSelfBackRight = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -205,7 +208,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtRobotName);
             this.groupBox2.Controls.Add(this.textBoxSender);
@@ -222,19 +225,19 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recived Data";
             // 
-            // checkBox1
+            // checkBox2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(1289, 28);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 20);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Scrol";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Location = new System.Drawing.Point(1305, 27);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(56, 20);
+            this.checkBox2.TabIndex = 26;
+            this.checkBox2.Text = "Scrol";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label7
             // 
@@ -294,9 +297,24 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnClearRecived.UseVisualStyleBackColor = false;
             this.btnClearRecived.Click += new System.EventHandler(this.btnClearRecived_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(738, 22);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(56, 20);
+            this.checkBox1.TabIndex = 26;
+            this.checkBox1.Text = "Scrol";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.btnClearSent);
             this.groupBox3.Controls.Add(this.richTextBoxDataSent);
             this.groupBox3.Controls.Add(this.label1);
@@ -314,6 +332,20 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Send Data";
+            // 
+            // btnClearSent
+            // 
+            this.btnClearSent.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSent.ImageKey = "delete.png";
+            this.btnClearSent.ImageList = this.imageList1;
+            this.btnClearSent.Location = new System.Drawing.Point(801, 12);
+            this.btnClearSent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearSent.Name = "btnClearSent";
+            this.btnClearSent.Size = new System.Drawing.Size(51, 39);
+            this.btnClearSent.TabIndex = 25;
+            this.btnClearSent.UseVisualStyleBackColor = false;
+            this.btnClearSent.Click += new System.EventHandler(this.btnClearSent_Click);
             // 
             // richTextBoxDataSent
             // 
@@ -426,10 +458,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnSelfBackRight);
             this.groupBox5.Controls.Add(this.btnSelfLeft);
             this.groupBox5.Controls.Add(this.btnforward);
             this.groupBox5.Controls.Add(this.btnLeft);
             this.groupBox5.Controls.Add(this.btnBack);
+            this.groupBox5.Controls.Add(this.btnSelfBackLeft);
             this.groupBox5.Controls.Add(this.btnSelfRight);
             this.groupBox5.Controls.Add(this.btnRight);
             this.groupBox5.Controls.Add(this.btnStop);
@@ -450,7 +484,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
             this.btnSelfLeft.TabIndex = 4;
             this.btnSelfLeft.UseVisualStyleBackColor = true;
-            this.btnSelfLeft.Click += new System.EventHandler(this.btnOriantation_Click);
+                     this.btnSelfLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnSelfLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnforward
             // 
@@ -462,7 +497,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnforward.Size = new System.Drawing.Size(55, 50);
             this.btnforward.TabIndex = 4;
             this.btnforward.UseVisualStyleBackColor = true;
-            this.btnforward.Click += new System.EventHandler(this.btnOriantation_Click);
+            this.btnforward.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnforward.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnLeft
             // 
@@ -474,7 +510,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnLeft.Size = new System.Drawing.Size(55, 50);
             this.btnLeft.TabIndex = 4;
             this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnOriantation_Click);
+         
+            this.btnLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnBack
             // 
@@ -486,7 +524,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnBack.Size = new System.Drawing.Size(55, 50);
             this.btnBack.TabIndex = 4;
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnOriantation_Click);
+         
+            this.btnBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnBack.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnSelfRight
             // 
@@ -498,7 +538,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
             this.btnSelfRight.TabIndex = 4;
             this.btnSelfRight.UseVisualStyleBackColor = true;
-            this.btnSelfRight.Click += new System.EventHandler(this.btnOriantation_Click);
+          
+            this.btnSelfRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnSelfRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnRight
             // 
@@ -510,7 +552,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRight.Size = new System.Drawing.Size(55, 50);
             this.btnRight.TabIndex = 4;
             this.btnRight.UseVisualStyleBackColor = true;
-            this.btnRight.Click += new System.EventHandler(this.btnOriantation_Click);
+   
+            this.btnRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnStop
             // 
@@ -522,7 +566,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnStop.Size = new System.Drawing.Size(55, 50);
             this.btnStop.TabIndex = 4;
             this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnOriantation_Click);
+          
+            this.btnStop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnStop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // groupBox1
             // 
@@ -627,7 +673,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRout.Size = new System.Drawing.Size(61, 53);
             this.btnRout.TabIndex = 13;
             this.btnRout.UseVisualStyleBackColor = true;
-            this.btnRout.Click += new System.EventHandler(this.btnOriantation_Click);
+           
+            this.btnRout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnRout.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnHome
             // 
@@ -639,7 +687,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome.Size = new System.Drawing.Size(61, 53);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnOriantation_Click);
+            
+            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnCam
             // 
@@ -744,19 +794,33 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // btnClearSent
+            // btnSelfBackLeft
             // 
-            this.btnClearSent.BackColor = System.Drawing.Color.Transparent;
-            this.btnClearSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearSent.ImageKey = "delete.png";
-            this.btnClearSent.ImageList = this.imageList1;
-            this.btnClearSent.Location = new System.Drawing.Point(801, 12);
-            this.btnClearSent.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClearSent.Name = "btnClearSent";
-            this.btnClearSent.Size = new System.Drawing.Size(51, 39);
-            this.btnClearSent.TabIndex = 25;
-            this.btnClearSent.UseVisualStyleBackColor = false;
-            this.btnClearSent.Click += new System.EventHandler(this.btnClearSent_Click);
+            this.btnSelfBackLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelfBackLeft.ImageKey = "SelfRight.png";
+            this.btnSelfBackLeft.ImageList = this.imageList1;
+            this.btnSelfBackLeft.Location = new System.Drawing.Point(26, 139);
+            this.btnSelfBackLeft.Name = "btnSelfBackLeft";
+            this.btnSelfBackLeft.Size = new System.Drawing.Size(40, 40);
+            this.btnSelfBackLeft.TabIndex = 4;
+            this.btnSelfBackLeft.UseVisualStyleBackColor = true;
+         
+            this.btnSelfBackLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnSelfBackLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
+            // 
+            // btnSelfBackRight
+            // 
+            this.btnSelfBackRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelfBackRight.ImageKey = "SelfLeft.png";
+            this.btnSelfBackRight.ImageList = this.imageList1;
+            this.btnSelfBackRight.Location = new System.Drawing.Point(171, 137);
+            this.btnSelfBackRight.Name = "btnSelfBackRight";
+            this.btnSelfBackRight.Size = new System.Drawing.Size(40, 40);
+            this.btnSelfBackRight.TabIndex = 4;
+            this.btnSelfBackRight.UseVisualStyleBackColor = true;
+      
+            this.btnSelfBackRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnSelfBackRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // frmRobotTest
             // 
@@ -857,5 +921,8 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRout;
         private System.Windows.Forms.Button btnClearSent;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button btnSelfBackRight;
+        private System.Windows.Forms.Button btnSelfBackLeft;
     }
 }

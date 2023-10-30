@@ -79,7 +79,7 @@ using System.Windows.Forms;
             txtRobotName.Text = recivedDataModel.NameModel.Name;
             lblBataryStrength.Text = recivedDataModel.BattaryModel.BattaryHealthy;
             lblWifiStrength.Text = recivedDataModel.WifiModel.Stringth;
-            lblSpeedValue.Text = recivedDataModel.MovmentModel.Speed.ToString();
+           // lblSpeedValue.Text = recivedDataModel.MovmentModel.Speed.ToString();
            // trackSpeed.Value = recivedDataModel.MovmentModel.Speed;
             lblSensorF.Text = recivedDataModel.SensorModel.SensorForwardMidel;
             lblSensorFR.Text = recivedDataModel.SensorModel.SensorForwardRight;
@@ -110,7 +110,9 @@ using System.Windows.Forms;
             udpClient.Connect(txtRobotIP.Text, Convert.ToInt16(txtPort.Text));
             Byte[] senddata = Encoding.ASCII.GetBytes(command);
             udpClient.Send(senddata, senddata.Length);
+
             richTextBoxDataSent.AppendText(command + "\n");
+
             if (checkBox1.Checked == true)
             {
                 richTextBoxDataSent.ScrollToCaret();
@@ -167,16 +169,7 @@ using System.Windows.Forms;
         {
             myIP();
         }
-        
-        private void btnOriantation_Click(object sender, EventArgs e)
-        {
-            var btnOriantation= (Button)sender;
-            string command = btnOriantation.Name.ToLower().Replace("btn","");            
-            SendCommand(command);
-        }
-
-   
-
+         
         private void btnClearRecived_Click(object sender, EventArgs e)
         {
             richTextBoxDataReceived.Clear();
@@ -202,6 +195,36 @@ using System.Windows.Forms;
             {
                 richTextBoxDataSent.ScrollBars= RichTextBoxScrollBars.None;
             }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                richTextBoxDataReceived.ScrollToCaret();
+            }
+            else
+            {
+                richTextBoxDataReceived.ScrollBars = RichTextBoxScrollBars.None;
+            }
+        }
+
+        private void btnsControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            var btnOriantation = (Button)sender;
+            string command = btnOriantation.Name.ToLower().Replace("btn", "");
+            if (trackSpeed.Value == 0)
+            {
+                trackSpeed.Value = 100;
+                SendCommand("speed " + trackSpeed.Value.ToString());
+
+            }
+            SendCommand(command);
+        }
+
+        private void btnsControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            SendCommand("stop");
         }
     }
 }
