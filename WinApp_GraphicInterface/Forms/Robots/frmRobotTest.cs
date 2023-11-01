@@ -29,12 +29,21 @@ using System.Windows.Forms;
         [Obsolete]
         void myIP()
         {
-            string hostName = Dns.GetHostName(); // Retrive the Name of HOST
-            txthostName.Text = hostName;
-            foreach (var  ip in Dns.GetHostByName(hostName).AddressList) { 
-               cmbtxtServerIps.Items.Add(ip.ToString());
+            try
+            {
+                string hostName = Dns.GetHostName(); // Retrive the Name of HOST
+                txthostName.Text = hostName;
+                foreach (var ip in Dns.GetHostByName(hostName).AddressList)
+                {
+                    cmbtxtServerIps.Items.Add(ip.ToString());
+                }
+                cmbtxtServerIps.SelectedIndex = 1;
             }
-            cmbtxtServerIps.SelectedIndex = 1;
+            catch (Exception ex)
+            {
+                MessageBox.Show("ther is problem in detecation Ip for robot you need to call support and say that msg: \n"+ex.Message);
+            }
+
         }
         public void serverThread() //SERVER
         {
@@ -111,7 +120,7 @@ using System.Windows.Forms;
             Byte[] senddata = Encoding.ASCII.GetBytes(command);
             udpClient.Send(senddata, senddata.Length);
 
-            richTextBoxDataSent.AppendText(command + "\n");
+            richTextBoxDataSent.AppendText(DateTime.Now.ToString("hh:mm:ss.fff")+": "+ command + "\n");
 
             if (checkBox1.Checked == true)
             {
@@ -149,6 +158,7 @@ using System.Windows.Forms;
 
             thdUDPServer.IsBackground = true; //<-- Set the thread to work in background
             thdUDPServer.Start();
+            
             status = true;
             btnConnect.Visible = false;
         }

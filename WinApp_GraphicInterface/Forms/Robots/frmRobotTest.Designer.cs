@@ -86,8 +86,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.btnSelfBackLeft = new System.Windows.Forms.Button();
-            this.btnSelfBackRight = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -458,12 +456,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnSelfBackRight);
             this.groupBox5.Controls.Add(this.btnSelfLeft);
             this.groupBox5.Controls.Add(this.btnforward);
             this.groupBox5.Controls.Add(this.btnLeft);
             this.groupBox5.Controls.Add(this.btnBack);
-            this.groupBox5.Controls.Add(this.btnSelfBackLeft);
             this.groupBox5.Controls.Add(this.btnSelfRight);
             this.groupBox5.Controls.Add(this.btnRight);
             this.groupBox5.Controls.Add(this.btnStop);
@@ -484,7 +480,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
             this.btnSelfLeft.TabIndex = 4;
             this.btnSelfLeft.UseVisualStyleBackColor = true;
-                     this.btnSelfLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
+            this.btnSelfLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnSelfLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
             // btnforward
@@ -510,7 +506,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnLeft.Size = new System.Drawing.Size(55, 50);
             this.btnLeft.TabIndex = 4;
             this.btnLeft.UseVisualStyleBackColor = true;
-         
             this.btnLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -524,7 +519,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnBack.Size = new System.Drawing.Size(55, 50);
             this.btnBack.TabIndex = 4;
             this.btnBack.UseVisualStyleBackColor = true;
-         
             this.btnBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnBack.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -538,7 +532,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
             this.btnSelfRight.TabIndex = 4;
             this.btnSelfRight.UseVisualStyleBackColor = true;
-          
             this.btnSelfRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnSelfRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -552,7 +545,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRight.Size = new System.Drawing.Size(55, 50);
             this.btnRight.TabIndex = 4;
             this.btnRight.UseVisualStyleBackColor = true;
-   
             this.btnRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -566,7 +558,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnStop.Size = new System.Drawing.Size(55, 50);
             this.btnStop.TabIndex = 4;
             this.btnStop.UseVisualStyleBackColor = true;
-          
             this.btnStop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnStop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -673,7 +664,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRout.Size = new System.Drawing.Size(61, 53);
             this.btnRout.TabIndex = 13;
             this.btnRout.UseVisualStyleBackColor = true;
-           
             this.btnRout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnRout.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -687,7 +677,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome.Size = new System.Drawing.Size(61, 53);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
-            
             this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
             this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
             // 
@@ -794,34 +783,6 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // btnSelfBackLeft
-            // 
-            this.btnSelfBackLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelfBackLeft.ImageKey = "SelfRight.png";
-            this.btnSelfBackLeft.ImageList = this.imageList1;
-            this.btnSelfBackLeft.Location = new System.Drawing.Point(26, 139);
-            this.btnSelfBackLeft.Name = "btnSelfBackLeft";
-            this.btnSelfBackLeft.Size = new System.Drawing.Size(40, 40);
-            this.btnSelfBackLeft.TabIndex = 4;
-            this.btnSelfBackLeft.UseVisualStyleBackColor = true;
-         
-            this.btnSelfBackLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
-            this.btnSelfBackLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
-            // 
-            // btnSelfBackRight
-            // 
-            this.btnSelfBackRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelfBackRight.ImageKey = "SelfLeft.png";
-            this.btnSelfBackRight.ImageList = this.imageList1;
-            this.btnSelfBackRight.Location = new System.Drawing.Point(171, 137);
-            this.btnSelfBackRight.Name = "btnSelfBackRight";
-            this.btnSelfBackRight.Size = new System.Drawing.Size(40, 40);
-            this.btnSelfBackRight.TabIndex = 4;
-            this.btnSelfBackRight.UseVisualStyleBackColor = true;
-      
-            this.btnSelfBackRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
-            this.btnSelfBackRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
-            // 
             // frmRobotTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -922,7 +883,5 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.Button btnRout;
         private System.Windows.Forms.Button btnClearSent;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button btnSelfBackRight;
-        private System.Windows.Forms.Button btnSelfBackLeft;
     }
 }

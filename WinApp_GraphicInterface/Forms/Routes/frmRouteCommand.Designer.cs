@@ -37,23 +37,19 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.pnlMainDrowing = new System.Windows.Forms.Panel();
             this.pnlCanvas = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fromPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelAndReturnHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.routDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startRouteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.robotCommandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.areaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.routToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlRulerLeft = new System.Windows.Forms.Panel();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.rulerControl1 = new Lyquidity.UtilityLibrary.Controls.RulerControl();
@@ -66,8 +62,12 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlTop = new System.Windows.Forms.Panel();
             this.hrulerControl = new Lyquidity.UtilityLibrary.Controls.RulerControl();
             this.pnlZro = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeVediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recalculatePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,9 +98,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 672);
+            this.panel1.Size = new System.Drawing.Size(281, 672);
             this.panel1.TabIndex = 1;
             // 
             // groupBox2
@@ -108,10 +108,10 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.groupBox2.Controls.Add(this.listView2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 235);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(207, 235);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(279, 235);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Robot\'s Area List";
@@ -121,9 +121,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(4, 19);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(199, 212);
+            this.listView2.Size = new System.Drawing.Size(271, 212);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -132,10 +132,10 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(207, 235);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(279, 235);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area List";
@@ -145,9 +145,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(4, 19);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(199, 212);
+            this.listView1.Size = new System.Drawing.Size(271, 212);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -162,10 +162,25 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadAreaToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripMenuItem1.Text = "Routs";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // loadAreaToolStripMenuItem
+            // 
+            this.loadAreaToolStripMenuItem.Name = "loadAreaToolStripMenuItem";
+            this.loadAreaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadAreaToolStripMenuItem.Text = "load Area";
+            // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(209, 30);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter1.Location = new System.Drawing.Point(281, 30);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(4, 672);
             this.splitter1.TabIndex = 3;
@@ -178,10 +193,10 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlMainDrowing.Controls.Add(this.statusDrowing);
             this.pnlMainDrowing.Controls.Add(this.pnlRulerTop);
             this.pnlMainDrowing.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainDrowing.Location = new System.Drawing.Point(213, 30);
-            this.pnlMainDrowing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMainDrowing.Location = new System.Drawing.Point(285, 30);
+            this.pnlMainDrowing.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMainDrowing.Name = "pnlMainDrowing";
-            this.pnlMainDrowing.Size = new System.Drawing.Size(1100, 672);
+            this.pnlMainDrowing.Size = new System.Drawing.Size(1028, 672);
             this.pnlMainDrowing.TabIndex = 8;
             // 
             // pnlCanvas
@@ -191,9 +206,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlCanvas.ContextMenuStrip = this.contextMenuStrip1;
             this.pnlCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCanvas.Location = new System.Drawing.Point(27, 25);
-            this.pnlCanvas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCanvas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlCanvas.Name = "pnlCanvas";
-            this.pnlCanvas.Size = new System.Drawing.Size(1073, 621);
+            this.pnlCanvas.Size = new System.Drawing.Size(1001, 621);
             this.pnlCanvas.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -202,16 +217,13 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fromPointToolStripMenuItem,
             this.toPointToolStripMenuItem,
-            this.returnHomeToolStripMenuItem,
-            this.stopToolStripMenuItem,
             this.cancelAndReturnHomeToolStripMenuItem,
-            this.routDataToolStripMenuItem,
             this.startRouteToolStripMenuItem,
             this.robotCommandToolStripMenuItem,
             this.areaToolStripMenuItem,
-            this.routToolStripMenuItem});
+            this.cameraToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(244, 244);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(244, 172);
             // 
             // fromPointToolStripMenuItem
             // 
@@ -225,29 +237,11 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.toPointToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
             this.toPointToolStripMenuItem.Text = "To Point";
             // 
-            // returnHomeToolStripMenuItem
-            // 
-            this.returnHomeToolStripMenuItem.Name = "returnHomeToolStripMenuItem";
-            this.returnHomeToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.returnHomeToolStripMenuItem.Text = "Return Home";
-            // 
-            // stopToolStripMenuItem
-            // 
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.stopToolStripMenuItem.Text = "Stop";
-            // 
             // cancelAndReturnHomeToolStripMenuItem
             // 
             this.cancelAndReturnHomeToolStripMenuItem.Name = "cancelAndReturnHomeToolStripMenuItem";
             this.cancelAndReturnHomeToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
             this.cancelAndReturnHomeToolStripMenuItem.Text = "Cancel and Return Home";
-            // 
-            // routDataToolStripMenuItem
-            // 
-            this.routDataToolStripMenuItem.Name = "routDataToolStripMenuItem";
-            this.routDataToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.routDataToolStripMenuItem.Text = "Rout Data";
             // 
             // startRouteToolStripMenuItem
             // 
@@ -258,51 +252,32 @@ namespace WinApp_GraphicInterface.Forms.Routes
             // robotCommandToolStripMenuItem
             // 
             this.robotCommandToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem});
+            this.controlToolStripMenuItem1});
             this.robotCommandToolStripMenuItem.Name = "robotCommandToolStripMenuItem";
             this.robotCommandToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.robotCommandToolStripMenuItem.Text = "Robot Command";
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(100, 26);
-            this.aToolStripMenuItem.Text = "a";
+            this.robotCommandToolStripMenuItem.Text = "Robot";
             // 
             // areaToolStripMenuItem
             // 
             this.areaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem1});
+            this.aToolStripMenuItem1,
+            this.recalculatePathToolStripMenuItem});
             this.areaToolStripMenuItem.Name = "areaToolStripMenuItem";
             this.areaToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.areaToolStripMenuItem.Text = "Area";
+            this.areaToolStripMenuItem.Text = "Route";
             // 
             // aToolStripMenuItem1
             // 
             this.aToolStripMenuItem1.Name = "aToolStripMenuItem1";
-            this.aToolStripMenuItem1.Size = new System.Drawing.Size(100, 26);
-            this.aToolStripMenuItem1.Text = "a";
-            // 
-            // routToolStripMenuItem
-            // 
-            this.routToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem2});
-            this.routToolStripMenuItem.Name = "routToolStripMenuItem";
-            this.routToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
-            this.routToolStripMenuItem.Text = "Rout";
-            // 
-            // aToolStripMenuItem2
-            // 
-            this.aToolStripMenuItem2.Name = "aToolStripMenuItem2";
-            this.aToolStripMenuItem2.Size = new System.Drawing.Size(100, 26);
-            this.aToolStripMenuItem2.Text = "a";
+            this.aToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.aToolStripMenuItem1.Text = "Rout Data";
             // 
             // pnlRulerLeft
             // 
             this.pnlRulerLeft.Controls.Add(this.pnlLeft);
             this.pnlRulerLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlRulerLeft.Location = new System.Drawing.Point(0, 25);
-            this.pnlRulerLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRulerLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRulerLeft.Name = "pnlRulerLeft";
             this.pnlRulerLeft.Size = new System.Drawing.Size(27, 621);
             this.pnlRulerLeft.TabIndex = 3;
@@ -313,7 +288,7 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlLeft.Controls.Add(this.rulerControl1);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(27, 621);
             this.pnlLeft.TabIndex = 3;
@@ -328,7 +303,7 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.rulerControl1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.rulerControl1.Location = new System.Drawing.Point(0, 0);
             this.rulerControl1.MajorInterval = 1;
-            this.rulerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rulerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.rulerControl1.MiddleMarkFactor = 3;
             this.rulerControl1.MouseTrackingOn = true;
             this.rulerControl1.Name = "rulerControl1";
@@ -352,7 +327,7 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.statusDrowing.Location = new System.Drawing.Point(0, 646);
             this.statusDrowing.Name = "statusDrowing";
             this.statusDrowing.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusDrowing.Size = new System.Drawing.Size(1100, 26);
+            this.statusDrowing.Size = new System.Drawing.Size(1028, 26);
             this.statusDrowing.SizingGrip = false;
             this.statusDrowing.TabIndex = 5;
             this.statusDrowing.Text = "statusStrip1";
@@ -387,9 +362,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlRulerTop.Controls.Add(this.pnlZro);
             this.pnlRulerTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRulerTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlRulerTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRulerTop.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRulerTop.Name = "pnlRulerTop";
-            this.pnlRulerTop.Size = new System.Drawing.Size(1100, 25);
+            this.pnlRulerTop.Size = new System.Drawing.Size(1028, 25);
             this.pnlRulerTop.TabIndex = 4;
             // 
             // pnlTop
@@ -398,9 +373,9 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlTop.Controls.Add(this.hrulerControl);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTop.Location = new System.Drawing.Point(25, 0);
-            this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1075, 25);
+            this.pnlTop.Size = new System.Drawing.Size(1003, 25);
             this.pnlTop.TabIndex = 2;
             // 
             // hrulerControl
@@ -413,14 +388,14 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.hrulerControl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.hrulerControl.Location = new System.Drawing.Point(0, 0);
             this.hrulerControl.MajorInterval = 1;
-            this.hrulerControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hrulerControl.Margin = new System.Windows.Forms.Padding(4);
             this.hrulerControl.MiddleMarkFactor = 3;
             this.hrulerControl.MouseTrackingOn = true;
             this.hrulerControl.Name = "hrulerControl";
             this.hrulerControl.Orientation = Lyquidity.UtilityLibrary.Controls.enumOrientation.orHorizontal;
             this.hrulerControl.RulerAlignment = Lyquidity.UtilityLibrary.Controls.enumRulerAlignment.raBottomOrRight;
             this.hrulerControl.ScaleMode = Lyquidity.UtilityLibrary.Controls.enumScaleMode.smCentimetres;
-            this.hrulerControl.Size = new System.Drawing.Size(1073, 23);
+            this.hrulerControl.Size = new System.Drawing.Size(1001, 23);
             this.hrulerControl.StartValue = 0D;
             this.hrulerControl.TabIndex = 1;
             this.hrulerControl.VerticalNumbers = false;
@@ -431,25 +406,50 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.pnlZro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlZro.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlZro.Location = new System.Drawing.Point(0, 0);
-            this.pnlZro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlZro.Margin = new System.Windows.Forms.Padding(4);
             this.pnlZro.Name = "pnlZro";
             this.pnlZro.Size = new System.Drawing.Size(25, 25);
             this.pnlZro.TabIndex = 1;
             // 
-            // toolStripMenuItem1
+            // cameraToolStripMenuItem
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadAreaToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(60, 24);
-            this.toolStripMenuItem1.Text = "Routs";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.cameraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.takeImageToolStripMenuItem,
+            this.takeVediToolStripMenuItem,
+            this.controlToolStripMenuItem});
+            this.cameraToolStripMenuItem.Name = "cameraToolStripMenuItem";
+            this.cameraToolStripMenuItem.Size = new System.Drawing.Size(243, 24);
+            this.cameraToolStripMenuItem.Text = "Camera";
             // 
-            // loadAreaToolStripMenuItem
+            // takeImageToolStripMenuItem
             // 
-            this.loadAreaToolStripMenuItem.Name = "loadAreaToolStripMenuItem";
-            this.loadAreaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.loadAreaToolStripMenuItem.Text = "load Area";
+            this.takeImageToolStripMenuItem.Name = "takeImageToolStripMenuItem";
+            this.takeImageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.takeImageToolStripMenuItem.Text = "Image";
+            // 
+            // takeVediToolStripMenuItem
+            // 
+            this.takeVediToolStripMenuItem.Name = "takeVediToolStripMenuItem";
+            this.takeVediToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.takeVediToolStripMenuItem.Text = "Video";
+            // 
+            // controlToolStripMenuItem
+            // 
+            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.controlToolStripMenuItem.Text = "Control";
+            // 
+            // recalculatePathToolStripMenuItem
+            // 
+            this.recalculatePathToolStripMenuItem.Name = "recalculatePathToolStripMenuItem";
+            this.recalculatePathToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.recalculatePathToolStripMenuItem.Text = "Recalculate Path";
+            // 
+            // controlToolStripMenuItem1
+            // 
+            this.controlToolStripMenuItem1.Name = "controlToolStripMenuItem1";
+            this.controlToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.controlToolStripMenuItem1.Text = "Control";
             // 
             // frmRouteCommand
             // 
@@ -462,7 +462,7 @@ namespace WinApp_GraphicInterface.Forms.Routes
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRouteCommand";
             this.Text = "frmRouteCommand";
             this.panel1.ResumeLayout(false);
@@ -499,17 +499,11 @@ namespace WinApp_GraphicInterface.Forms.Routes
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fromPointToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toPointToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem returnHomeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelAndReturnHomeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem routDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startRouteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem robotCommandToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem areaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem routToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem2;
         private System.Windows.Forms.Panel pnlRulerLeft;
         private System.Windows.Forms.Panel pnlLeft;
         private Lyquidity.UtilityLibrary.Controls.RulerControl rulerControl1;
@@ -524,5 +518,11 @@ namespace WinApp_GraphicInterface.Forms.Routes
         private System.Windows.Forms.Panel pnlZro;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem loadAreaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cameraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeVediToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem recalculatePathToolStripMenuItem;
     }
 }

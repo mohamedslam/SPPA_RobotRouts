@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WinApp_GraphicInterface.Forms.Auth;
 using WinApp_GraphicInterface.Forms.DrawAreaPlan;
 using WinApp_GraphicInterface.Forms.Robots;
 using WinApp_GraphicInterface.Forms.Routes;
@@ -55,6 +56,22 @@ namespace WinApp_GraphicInterface.Forms
         private void commandToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFormChild(new frmRouteCommand()); 
+        }
+
+        private void robotTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFormChild(new frmRobotTest());
+
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFormChild(new frmUsers());
+        }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFormChild(new frmAuthUsers());
         }
     }
 }

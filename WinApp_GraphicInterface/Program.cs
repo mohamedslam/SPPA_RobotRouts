@@ -15,7 +15,7 @@ namespace WinApp_GraphicInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRobotTest());
+            Application.Run(new frmMainApp());
         }
     }
 }

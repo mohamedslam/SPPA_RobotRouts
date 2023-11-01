@@ -35,6 +35,7 @@ namespace WinApp_GraphicInterface.Forms
             this.drowAreaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.robotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.robotDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.routeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSetting = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,10 @@ namespace WinApp_GraphicInterface.Forms
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abotAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.heelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRobotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.robotTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +67,7 @@ namespace WinApp_GraphicInterface.Forms
             this.drowAreaToolStripMenuItem,
             this.robotToolStripMenuItem,
             this.routeToolStripMenuItem,
+            this.usersToolStripMenuItem,
             this.menuSetting,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -82,7 +87,7 @@ namespace WinApp_GraphicInterface.Forms
             // drowAreaToolStripMenuItem1
             // 
             this.drowAreaToolStripMenuItem1.Name = "drowAreaToolStripMenuItem1";
-            this.drowAreaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.drowAreaToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.drowAreaToolStripMenuItem1.Text = "Draw Area";
             this.drowAreaToolStripMenuItem1.Click += new System.EventHandler(this.drowAreaToolStripMenuItem1_Click);
             // 
@@ -90,7 +95,8 @@ namespace WinApp_GraphicInterface.Forms
             // 
             this.robotToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.robotDataToolStripMenuItem,
-            this.addRobotToolStripMenuItem});
+            this.addRobotToolStripMenuItem,
+            this.robotTestToolStripMenuItem});
             this.robotToolStripMenuItem.Name = "robotToolStripMenuItem";
             this.robotToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.robotToolStripMenuItem.Text = "Robot";
@@ -101,6 +107,13 @@ namespace WinApp_GraphicInterface.Forms
             this.robotDataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.robotDataToolStripMenuItem.Text = "Robot Data";
             this.robotDataToolStripMenuItem.Click += new System.EventHandler(this.robotDataToolStripMenuItem_Click);
+            // 
+            // addRobotToolStripMenuItem
+            // 
+            this.addRobotToolStripMenuItem.Name = "addRobotToolStripMenuItem";
+            this.addRobotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addRobotToolStripMenuItem.Text = "Add Robot";
+            this.addRobotToolStripMenuItem.Click += new System.EventHandler(this.addRobotToolStripMenuItem_Click);
             // 
             // routeToolStripMenuItem
             // 
@@ -113,7 +126,7 @@ namespace WinApp_GraphicInterface.Forms
             // commandToolStripMenuItem
             // 
             this.commandToolStripMenuItem.Name = "commandToolStripMenuItem";
-            this.commandToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.commandToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.commandToolStripMenuItem.Text = "Command";
             this.commandToolStripMenuItem.Click += new System.EventHandler(this.commandToolStripMenuItem_Click);
             // 
@@ -128,7 +141,7 @@ namespace WinApp_GraphicInterface.Forms
             // rulerToolStripMenuItem
             // 
             this.rulerToolStripMenuItem.Name = "rulerToolStripMenuItem";
-            this.rulerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rulerToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
             this.rulerToolStripMenuItem.Text = "Ruler";
             this.rulerToolStripMenuItem.Click += new System.EventHandler(this.rulerToolStripMenuItem_Click);
             // 
@@ -144,23 +157,46 @@ namespace WinApp_GraphicInterface.Forms
             // abotAppToolStripMenuItem
             // 
             this.abotAppToolStripMenuItem.Name = "abotAppToolStripMenuItem";
-            this.abotAppToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.abotAppToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.abotAppToolStripMenuItem.Text = "About App";
             this.abotAppToolStripMenuItem.Click += new System.EventHandler(this.abotAppToolStripMenuItem_Click);
             // 
             // heelpToolStripMenuItem
             // 
             this.heelpToolStripMenuItem.Name = "heelpToolStripMenuItem";
-            this.heelpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.heelpToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.heelpToolStripMenuItem.Text = "Help";
             this.heelpToolStripMenuItem.Click += new System.EventHandler(this.heelpToolStripMenuItem_Click);
             // 
-            // addRobotToolStripMenuItem
+            // robotTestToolStripMenuItem
             // 
-            this.addRobotToolStripMenuItem.Name = "addRobotToolStripMenuItem";
-            this.addRobotToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.addRobotToolStripMenuItem.Text = "Add Robot";
-            this.addRobotToolStripMenuItem.Click += new System.EventHandler(this.addRobotToolStripMenuItem_Click);
+            this.robotTestToolStripMenuItem.Name = "robotTestToolStripMenuItem";
+            this.robotTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.robotTestToolStripMenuItem.Text = "Robot Test";
+            this.robotTestToolStripMenuItem.Click += new System.EventHandler(this.robotTestToolStripMenuItem_Click);
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addUserToolStripMenuItem,
+            this.rolesToolStripMenuItem});
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.usersToolStripMenuItem.Text = "Users";
+            // 
+            // addUserToolStripMenuItem
+            // 
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addUserToolStripMenuItem.Text = "Add User";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // frmMainApp
             // 
@@ -198,5 +234,9 @@ namespace WinApp_GraphicInterface.Forms
         private System.Windows.Forms.ToolStripMenuItem menuSetting;
         private System.Windows.Forms.ToolStripMenuItem rulerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addRobotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem robotTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
     }
 }
