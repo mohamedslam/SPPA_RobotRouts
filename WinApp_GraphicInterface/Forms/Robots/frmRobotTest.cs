@@ -10,7 +10,9 @@ using System.Net.Sockets;
   using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-  namespace WinApp_GraphicInterface.Forms.Robots
+using WinApp_GraphicInterface.Forms.Robots.Camera;
+
+namespace WinApp_GraphicInterface.Forms.Robots
 {
     public partial class frmRobotTest : Form
     {
@@ -191,8 +193,8 @@ using System.Windows.Forms;
         } 
         private void btnCam_Click(object sender, EventArgs e)
         {
-            SendCommand("takePic");
-            MessageBox.Show("I wait Shipment of My cam");
+            SendCommand("StartCam");
+            new frmCamRobotTest("192.168.43.41",81).ShowDialog();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
