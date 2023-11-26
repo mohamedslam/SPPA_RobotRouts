@@ -24,7 +24,7 @@ namespace SPPA.Models.RobotModels
         public RobotMovmentModel MovmentModel { get; set; }
         public RobotCameraModel CameraModel { get; set; }
         public RecivedDataRobotModel(string data)
-        {
+        { 
             ReadLine(data, ';');
             //RealServerDateTimeModel = SetAllMemberData<DateTime >(RealServerDateTime);
             NameModel= SetAllMemberData<RobotNameModel>(RobotName);
@@ -125,18 +125,18 @@ namespace SPPA.Models.RobotModels
         }
         public void ReadLine(string dataline, char sperated)
         {
-            var values = dataline.Split(sperated);
-            {
-                RealServerDateTime = values[0];
-                RobotName = values[1];
-                Battary = values[2];
-                Wifi = values[3];
-                Sensor = values[4];
-                Movment = values[5];
-                Camera = values[6];
-                Status = values[7];
-              //  RealRobotDateTime = values[8];
-            }
+                var values = dataline.Split(sperated);
+                {
+                    RealServerDateTime = values[0];
+                    RobotName = values[1];
+                    Battary = values[2];
+                    Wifi = values[3];
+                    Sensor = values[4];
+                    Movment = values[5];
+                    Camera = values[6];
+                    Status = values[7];
+                    //  RealRobotDateTime = values[8];
+                }       
         }
     }
 }

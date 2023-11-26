@@ -56,10 +56,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.cmbtxtServerIps = new System.Windows.Forms.ComboBox();
             this.txthostName = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.trackSpeed = new System.Windows.Forms.TrackBar();
-            this.lblSpeedValue = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtSteps = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSelfLeft = new System.Windows.Forms.Button();
             this.btnforward = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
@@ -68,6 +67,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRight = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.trackSensorServoMotor = new System.Windows.Forms.TrackBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSensorF = new System.Windows.Forms.Label();
             this.lblSensorFL = new System.Windows.Forms.Label();
@@ -79,22 +79,35 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome = new System.Windows.Forms.Button();
             this.btnCam = new System.Windows.Forms.Button();
             this.lblWifiStrength = new System.Windows.Forms.Label();
+            this.btnWiFi = new System.Windows.Forms.Button();
             this.lblBataryStrength = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbAngle = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.trackSpeed = new System.Windows.Forms.TrackBar();
+            this.lblSpeedValue = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSensorServoMotor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSendData
@@ -103,7 +116,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSendData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendData.ImageKey = "connect.png";
             this.btnSendData.ImageList = this.imageList1;
-            this.btnSendData.Location = new System.Drawing.Point(4, 218);
+            this.btnSendData.Location = new System.Drawing.Point(4, 312);
             this.btnSendData.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendData.Name = "btnSendData";
             this.btnSendData.Size = new System.Drawing.Size(852, 41);
@@ -173,7 +186,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.txtRobotIP.Name = "txtRobotIP";
             this.txtRobotIP.Size = new System.Drawing.Size(157, 22);
             this.txtRobotIP.TabIndex = 3;
-            this.txtRobotIP.Text = "192.168.43.62";
+            this.txtRobotIP.Text = "192.168.43.3";
             // 
             // txtPort
             // 
@@ -196,8 +209,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             // txtMsg
             // 
+            this.txtMsg.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtMsg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtMsg.Location = new System.Drawing.Point(4, 196);
+            this.txtMsg.Location = new System.Drawing.Point(4, 290);
             this.txtMsg.Margin = new System.Windows.Forms.Padding(4);
             this.txtMsg.Name = "txtMsg";
             this.txtMsg.Size = new System.Drawing.Size(852, 22);
@@ -214,11 +228,11 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox2.Controls.Add(this.btnClearRecived);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Location = new System.Drawing.Point(0, 343);
+            this.groupBox2.Location = new System.Drawing.Point(0, 437);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1444, 452);
+            this.groupBox2.Size = new System.Drawing.Size(1444, 358);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recived Data";
@@ -272,12 +286,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.richTextBoxDataReceived.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richTextBoxDataReceived.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxDataReceived.ForeColor = System.Drawing.Color.White;
-            this.richTextBoxDataReceived.Location = new System.Drawing.Point(4, 65);
+            this.richTextBoxDataReceived.Location = new System.Drawing.Point(4, 60);
             this.richTextBoxDataReceived.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxDataReceived.MaxLength = 2;
             this.richTextBoxDataReceived.Name = "richTextBoxDataReceived";
             this.richTextBoxDataReceived.ReadOnly = true;
-            this.richTextBoxDataReceived.Size = new System.Drawing.Size(1436, 383);
+            this.richTextBoxDataReceived.Size = new System.Drawing.Size(1436, 294);
             this.richTextBoxDataReceived.TabIndex = 23;
             this.richTextBoxDataReceived.Text = "";
             // 
@@ -326,7 +340,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(860, 263);
+            this.groupBox3.Size = new System.Drawing.Size(860, 357);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Send Data";
@@ -337,10 +351,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnClearSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSent.ImageKey = "delete.png";
             this.btnClearSent.ImageList = this.imageList1;
-            this.btnClearSent.Location = new System.Drawing.Point(801, 12);
+            this.btnClearSent.Location = new System.Drawing.Point(804, 10);
             this.btnClearSent.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearSent.Name = "btnClearSent";
-            this.btnClearSent.Size = new System.Drawing.Size(51, 39);
+            this.btnClearSent.Size = new System.Drawing.Size(51, 41);
             this.btnClearSent.TabIndex = 25;
             this.btnClearSent.UseVisualStyleBackColor = false;
             this.btnClearSent.Click += new System.EventHandler(this.btnClearSent_Click);
@@ -350,12 +364,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.richTextBoxDataSent.BackColor = System.Drawing.Color.MidnightBlue;
             this.richTextBoxDataSent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxDataSent.ForeColor = System.Drawing.Color.White;
-            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 52);
+            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 59);
             this.richTextBoxDataSent.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxDataSent.MaxLength = 2;
             this.richTextBoxDataSent.Name = "richTextBoxDataSent";
             this.richTextBoxDataSent.ReadOnly = true;
-            this.richTextBoxDataSent.Size = new System.Drawing.Size(852, 144);
+            this.richTextBoxDataSent.Size = new System.Drawing.Size(852, 231);
             this.richTextBoxDataSent.TabIndex = 24;
             this.richTextBoxDataSent.Text = "";
             // 
@@ -401,61 +415,30 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.groupBox1);
             this.groupBox4.Controls.Add(this.btnRout);
             this.groupBox4.Controls.Add(this.btnHome);
             this.groupBox4.Controls.Add(this.btnCam);
             this.groupBox4.Controls.Add(this.lblWifiStrength);
+            this.groupBox4.Controls.Add(this.btnWiFi);
             this.groupBox4.Controls.Add(this.lblBataryStrength);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox4.Location = new System.Drawing.Point(860, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(584, 343);
+            this.groupBox4.Size = new System.Drawing.Size(584, 437);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Send Control";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.trackSpeed);
-            this.groupBox6.Controls.Add(this.lblSpeedValue);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(3, 282);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(578, 58);
-            this.groupBox6.TabIndex = 16;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Speed";
-            // 
-            // trackSpeed
-            // 
-            this.trackSpeed.Dock = System.Windows.Forms.DockStyle.Left;
-            this.trackSpeed.Location = new System.Drawing.Point(3, 18);
-            this.trackSpeed.Maximum = 255;
-            this.trackSpeed.Name = "trackSpeed";
-            this.trackSpeed.Size = new System.Drawing.Size(540, 37);
-            this.trackSpeed.TabIndex = 5;
-            this.trackSpeed.Scroll += new System.EventHandler(this.trackSpeed_Scroll);
-            // 
-            // lblSpeedValue
-            // 
-            this.lblSpeedValue.AutoSize = true;
-            this.lblSpeedValue.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblSpeedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSpeedValue.Location = new System.Drawing.Point(557, 18);
-            this.lblSpeedValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSpeedValue.Name = "lblSpeedValue";
-            this.lblSpeedValue.Size = new System.Drawing.Size(18, 20);
-            this.lblSpeedValue.TabIndex = 2;
-            this.lblSpeedValue.Text = "1";
-            this.lblSpeedValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.groupBox6);
+            this.groupBox5.Controls.Add(this.cmbAngle);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.txtSteps);
+            this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.btnSelfLeft);
             this.groupBox5.Controls.Add(this.btnforward);
             this.groupBox5.Controls.Add(this.btnLeft);
@@ -463,19 +446,38 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox5.Controls.Add(this.btnSelfRight);
             this.groupBox5.Controls.Add(this.btnRight);
             this.groupBox5.Controls.Add(this.btnStop);
-            this.groupBox5.Location = new System.Drawing.Point(344, 87);
+            this.groupBox5.Location = new System.Drawing.Point(347, 96);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(230, 190);
+            this.groupBox5.Size = new System.Drawing.Size(233, 332);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Movment";
+            // 
+            // txtSteps
+            // 
+            this.txtSteps.Location = new System.Drawing.Point(57, 24);
+            this.txtSteps.Name = "txtSteps";
+            this.txtSteps.Size = new System.Drawing.Size(55, 22);
+            this.txtSteps.TabIndex = 6;
+            this.txtSteps.Text = "1";
+            this.txtSteps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label2.Location = new System.Drawing.Point(5, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Steps:";
             // 
             // btnSelfLeft
             // 
             this.btnSelfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelfLeft.ImageKey = "SelfLeft.png";
             this.btnSelfLeft.ImageList = this.imageList1;
-            this.btnSelfLeft.Location = new System.Drawing.Point(18, 30);
+            this.btnSelfLeft.Location = new System.Drawing.Point(30, 92);
             this.btnSelfLeft.Name = "btnSelfLeft";
             this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
             this.btnSelfLeft.TabIndex = 4;
@@ -488,7 +490,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnforward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnforward.ImageKey = "forward.png";
             this.btnforward.ImageList = this.imageList1;
-            this.btnforward.Location = new System.Drawing.Point(86, 23);
+            this.btnforward.Location = new System.Drawing.Point(85, 87);
             this.btnforward.Name = "btnforward";
             this.btnforward.Size = new System.Drawing.Size(55, 50);
             this.btnforward.TabIndex = 4;
@@ -501,7 +503,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeft.ImageKey = "left.png";
             this.btnLeft.ImageList = this.imageList1;
-            this.btnLeft.Location = new System.Drawing.Point(18, 78);
+            this.btnLeft.Location = new System.Drawing.Point(30, 137);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(55, 50);
             this.btnLeft.TabIndex = 4;
@@ -514,7 +516,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ImageKey = "Back.png";
             this.btnBack.ImageList = this.imageList1;
-            this.btnBack.Location = new System.Drawing.Point(86, 133);
+            this.btnBack.Location = new System.Drawing.Point(86, 189);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(55, 50);
             this.btnBack.TabIndex = 4;
@@ -527,7 +529,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelfRight.ImageKey = "SelfRight.png";
             this.btnSelfRight.ImageList = this.imageList1;
-            this.btnSelfRight.Location = new System.Drawing.Point(169, 28);
+            this.btnSelfRight.Location = new System.Drawing.Point(155, 91);
             this.btnSelfRight.Name = "btnSelfRight";
             this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
             this.btnSelfRight.TabIndex = 4;
@@ -540,7 +542,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRight.ImageKey = "right.png";
             this.btnRight.ImageList = this.imageList1;
-            this.btnRight.Location = new System.Drawing.Point(154, 74);
+            this.btnRight.Location = new System.Drawing.Point(142, 137);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(55, 50);
             this.btnRight.TabIndex = 4;
@@ -553,7 +555,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.ImageKey = "Stop.png";
             this.btnStop.ImageList = this.imageList1;
-            this.btnStop.Location = new System.Drawing.Point(86, 77);
+            this.btnStop.Location = new System.Drawing.Point(86, 138);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(55, 50);
             this.btnStop.TabIndex = 4;
@@ -563,6 +565,14 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.trackSensorServoMotor);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.lblSensorF);
             this.groupBox1.Controls.Add(this.lblSensorFL);
@@ -570,18 +580,31 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox1.Controls.Add(this.lblSensorR);
             this.groupBox1.Controls.Add(this.lblSensorL);
             this.groupBox1.Controls.Add(this.lblSensorB);
-            this.groupBox1.Location = new System.Drawing.Point(19, 87);
+            this.groupBox1.Location = new System.Drawing.Point(3, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 188);
+            this.groupBox1.Size = new System.Drawing.Size(340, 341);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sensors";
+            // 
+            // trackSensorServoMotor
+            // 
+            this.trackSensorServoMotor.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.trackSensorServoMotor.Location = new System.Drawing.Point(3, 282);
+            this.trackSensorServoMotor.Maximum = 180;
+            this.trackSensorServoMotor.Name = "trackSensorServoMotor";
+            this.trackSensorServoMotor.Size = new System.Drawing.Size(334, 56);
+            this.trackSensorServoMotor.SmallChange = 5;
+            this.trackSensorServoMotor.TabIndex = 19;
+            this.trackSensorServoMotor.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackSensorServoMotor.Value = 90;
+            this.trackSensorServoMotor.Scroll += new System.EventHandler(this.trackSensorServoMotor_Scroll);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::WinApp_GraphicInterface.Properties.Resources.png_transparent_maine_drone_society_robot_unmanned_aerial_vehicle_autonomous_car_odometry_robot_angle_electronics_vehicle_thumbnail;
-            this.pictureBox2.Location = new System.Drawing.Point(73, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 39);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(93, 81);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -593,7 +616,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorF.AutoSize = true;
             this.lblSensorF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorF.Location = new System.Drawing.Point(95, 17);
+            this.lblSensorF.Location = new System.Drawing.Point(118, 15);
             this.lblSensorF.Name = "lblSensorF";
             this.lblSensorF.Size = new System.Drawing.Size(63, 16);
             this.lblSensorF.TabIndex = 11;
@@ -604,7 +627,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorFL.AutoSize = true;
             this.lblSensorFL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorFL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorFL.Location = new System.Drawing.Point(42, 43);
+            this.lblSensorFL.Location = new System.Drawing.Point(32, 36);
             this.lblSensorFL.Name = "lblSensorFL";
             this.lblSensorFL.Size = new System.Drawing.Size(63, 16);
             this.lblSensorFL.TabIndex = 11;
@@ -615,7 +638,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorFR.AutoSize = true;
             this.lblSensorFR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorFR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorFR.Location = new System.Drawing.Point(145, 43);
+            this.lblSensorFR.Location = new System.Drawing.Point(224, 33);
             this.lblSensorFR.Name = "lblSensorFR";
             this.lblSensorFR.Size = new System.Drawing.Size(63, 16);
             this.lblSensorFR.TabIndex = 11;
@@ -626,7 +649,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorR.AutoSize = true;
             this.lblSensorR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorR.Location = new System.Drawing.Point(177, 97);
+            this.lblSensorR.Location = new System.Drawing.Point(224, 104);
             this.lblSensorR.Name = "lblSensorR";
             this.lblSensorR.Size = new System.Drawing.Size(63, 16);
             this.lblSensorR.TabIndex = 11;
@@ -637,7 +660,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorL.AutoSize = true;
             this.lblSensorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorL.Location = new System.Drawing.Point(11, 96);
+            this.lblSensorL.Location = new System.Drawing.Point(32, 102);
             this.lblSensorL.Name = "lblSensorL";
             this.lblSensorL.Size = new System.Drawing.Size(63, 16);
             this.lblSensorL.TabIndex = 11;
@@ -648,7 +671,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblSensorB.AutoSize = true;
             this.lblSensorB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblSensorB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblSensorB.Location = new System.Drawing.Point(96, 154);
+            this.lblSensorB.Location = new System.Drawing.Point(124, 134);
             this.lblSensorB.Name = "lblSensorB";
             this.lblSensorB.Size = new System.Drawing.Size(63, 16);
             this.lblSensorB.TabIndex = 11;
@@ -659,9 +682,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRout.ImageKey = "Route.png";
             this.btnRout.ImageList = this.imageList1;
-            this.btnRout.Location = new System.Drawing.Point(274, 224);
+            this.btnRout.Location = new System.Drawing.Point(436, 15);
             this.btnRout.Name = "btnRout";
-            this.btnRout.Size = new System.Drawing.Size(61, 53);
+            this.btnRout.Size = new System.Drawing.Size(61, 45);
             this.btnRout.TabIndex = 13;
             this.btnRout.UseVisualStyleBackColor = true;
             this.btnRout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
@@ -672,9 +695,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.ImageKey = "home.png";
             this.btnHome.ImageList = this.imageList1;
-            this.btnHome.Location = new System.Drawing.Point(274, 93);
+            this.btnHome.Location = new System.Drawing.Point(510, 15);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(61, 53);
+            this.btnHome.Size = new System.Drawing.Size(61, 45);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
@@ -685,9 +708,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCam.ImageKey = "cam.png";
             this.btnCam.ImageList = this.imageList1;
-            this.btnCam.Location = new System.Drawing.Point(499, 21);
+            this.btnCam.Location = new System.Drawing.Point(362, 14);
             this.btnCam.Name = "btnCam";
-            this.btnCam.Size = new System.Drawing.Size(75, 56);
+            this.btnCam.Size = new System.Drawing.Size(61, 46);
             this.btnCam.TabIndex = 12;
             this.btnCam.UseVisualStyleBackColor = true;
             this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
@@ -697,18 +720,31 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.lblWifiStrength.AutoSize = true;
             this.lblWifiStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblWifiStrength.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblWifiStrength.Location = new System.Drawing.Point(140, 40);
+            this.lblWifiStrength.Location = new System.Drawing.Point(138, 30);
             this.lblWifiStrength.Name = "lblWifiStrength";
             this.lblWifiStrength.Size = new System.Drawing.Size(36, 16);
             this.lblWifiStrength.TabIndex = 11;
             this.lblWifiStrength.Text = "7/10";
+            // 
+            // btnWiFi
+            // 
+            this.btnWiFi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWiFi.ImageKey = "refresh.png";
+            this.btnWiFi.Location = new System.Drawing.Point(14, 27);
+            this.btnWiFi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnWiFi.Name = "btnWiFi";
+            this.btnWiFi.Size = new System.Drawing.Size(92, 27);
+            this.btnWiFi.TabIndex = 5;
+            this.btnWiFi.Text = "Wifi Data";
+            this.btnWiFi.UseVisualStyleBackColor = true;
+            this.btnWiFi.Click += new System.EventHandler(this.btnWiFi_Click);
             // 
             // lblBataryStrength
             // 
             this.lblBataryStrength.AutoSize = true;
             this.lblBataryStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.lblBataryStrength.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblBataryStrength.Location = new System.Drawing.Point(315, 39);
+            this.lblBataryStrength.Location = new System.Drawing.Point(138, 60);
             this.lblBataryStrength.Name = "lblBataryStrength";
             this.lblBataryStrength.Size = new System.Drawing.Size(36, 16);
             this.lblBataryStrength.TabIndex = 11;
@@ -718,21 +754,11 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label9.Location = new System.Drawing.Point(190, 36);
+            this.label9.Location = new System.Drawing.Point(20, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
             this.label9.TabIndex = 11;
             this.label9.Text = "Batary";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label8.Location = new System.Drawing.Point(15, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Wifi Strength";
             // 
             // label5
             // 
@@ -775,13 +801,150 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.ImageKey = "WiFi.png";
             this.btnConnect.ImageList = this.imageList1;
-            this.btnConnect.Location = new System.Drawing.Point(799, 20);
+            this.btnConnect.Location = new System.Drawing.Point(784, 8);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(53, 48);
+            this.btnConnect.Size = new System.Drawing.Size(72, 64);
             this.btnConnect.TabIndex = 0;
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label8.Location = new System.Drawing.Point(16, 225);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 16);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Gyroscope:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label10.Location = new System.Drawing.Point(115, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Angle:";
+            // 
+            // cmbAngle
+            // 
+            this.cmbAngle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbAngle.FormatString = "N2";
+            this.cmbAngle.FormattingEnabled = true;
+            this.cmbAngle.Items.AddRange(new object[] {
+            "115",
+            "125",
+            "135",
+            "145",
+            "15",
+            "160",
+            "175",
+            "180",
+            "25",
+            "35",
+            "45",
+            "55",
+            "90"});
+            this.cmbAngle.Location = new System.Drawing.Point(170, 24);
+            this.cmbAngle.Name = "cmbAngle";
+            this.cmbAngle.Size = new System.Drawing.Size(55, 24);
+            this.cmbAngle.Sorted = true;
+            this.cmbAngle.TabIndex = 7;
+            this.cmbAngle.Text = "45";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label11.Location = new System.Drawing.Point(16, 252);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 16);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Accelerator:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(124, 225);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 16);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "X:0 Y:0 Z:0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(124, 252);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 16);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "X:0 Y:0 Z:0";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.trackSpeed);
+            this.groupBox6.Controls.Add(this.lblSpeedValue);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox6.Location = new System.Drawing.Point(3, 271);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(227, 58);
+            this.groupBox6.TabIndex = 17;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Speed";
+            // 
+            // trackSpeed
+            // 
+            this.trackSpeed.Dock = System.Windows.Forms.DockStyle.Left;
+            this.trackSpeed.Location = new System.Drawing.Point(3, 18);
+            this.trackSpeed.Maximum = 255;
+            this.trackSpeed.Name = "trackSpeed";
+            this.trackSpeed.Size = new System.Drawing.Size(540, 37);
+            this.trackSpeed.TabIndex = 5;
+            // 
+            // lblSpeedValue
+            // 
+            this.lblSpeedValue.AutoSize = true;
+            this.lblSpeedValue.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblSpeedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.lblSpeedValue.Location = new System.Drawing.Point(206, 18);
+            this.lblSpeedValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSpeedValue.Name = "lblSpeedValue";
+            this.lblSpeedValue.Size = new System.Drawing.Size(18, 20);
+            this.lblSpeedValue.TabIndex = 2;
+            this.lblSpeedValue.Text = "1";
+            this.lblSpeedValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label14.Location = new System.Drawing.Point(16, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 16);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Temperature:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(124, 195);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 16);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "0";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label16.Location = new System.Drawing.Point(157, 195);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 16);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "C";
             // 
             // frmRobotTest
             // 
@@ -813,14 +976,16 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackSensorServoMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackSpeed)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -854,15 +1019,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.Button btnSelfRight;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TrackBar trackSpeed;
-        private System.Windows.Forms.Label lblSpeedValue;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblSensorR;
         private System.Windows.Forms.Label lblSensorB;
@@ -877,11 +1039,26 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.Label lblSensorFL;
         private System.Windows.Forms.RichTextBox richTextBoxDataSent;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRout;
         private System.Windows.Forms.Button btnClearSent;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TrackBar trackSensorServoMotor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSteps;
+        private System.Windows.Forms.Button btnWiFi;
+        private System.Windows.Forms.ComboBox cmbAngle;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TrackBar trackSpeed;
+        private System.Windows.Forms.Label lblSpeedValue;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -10,7 +10,7 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 namespace WinApp_GraphicInterface.Forms.Robots.Camera
 {
-    public partial class frmCamRobotTest : WinApp_GraphicInterface.Forms.frmBase
+    public partial class frmCamRobotTest : Form
     {
       
         MJPEGStream stream;

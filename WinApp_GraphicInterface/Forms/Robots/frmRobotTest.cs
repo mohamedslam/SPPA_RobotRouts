@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-  using System.Text;
+using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using WinApp_GraphicInterface.Forms.Robots.Camera;
@@ -62,7 +62,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
                     date = DateTime.Now.ToString("hh:mm:ss:fff;");
                     data = date + returnData;
                     //toDo Analyzing String Msg
-                    AnalyzingDataRecivedFromRobots(data);
+                   AnalyzingDataRecivedFromRobots(data);
                     textBoxSender.Text = RemoteIpEndPoint.Address.ToString();
 
                     richTextBoxDataReceived.AppendText(data + "\n");
@@ -114,15 +114,23 @@ namespace WinApp_GraphicInterface.Forms.Robots
             }
             return records;
         }
-      
-        private void SendCommand(string command)
+      public enum CommandType
+        {
+            SMC,//System Motor   Control
+            SSC,//       Sensor  Control
+            SCC,//       Camera  Control
+            SDC,//       Display Control
+            SCW,//       WiFi    Control
+            SDS,//       Data    Serial 
+        }
+        public  void SendCommand(string command, CommandType commandType)
         {
             UdpClient udpClient = new UdpClient();
             udpClient.Connect(txtRobotIP.Text, Convert.ToInt16(txtPort.Text));
-            Byte[] senddata = Encoding.ASCII.GetBytes(command);
+            Byte[] senddata = Encoding.ASCII.GetBytes(commandType.ToString()+">"+command);
             udpClient.Send(senddata, senddata.Length);
 
-            richTextBoxDataSent.AppendText(DateTime.Now.ToString("hh:mm:ss.fff")+": "+ command + "\n");
+            richTextBoxDataSent.AppendText(DateTime.Now.ToString("hh:mm:ss.fff")+": "+ commandType.ToString() + ">" + command + "\n");
 
             if (checkBox1.Checked == true)
             {
@@ -149,7 +157,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
 
         private void btnSendData_Click(object sender, EventArgs e)
         {
-            SendCommand(txtMsg.Text);
+            SendCommand(txtMsg.Text, CommandType.SDS);
         }       
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -173,7 +181,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private void trackSpeed_Scroll(object sender, EventArgs e)
         {
             lblSpeedValue.Text = trackSpeed.Value.ToString();
-            SendCommand("speed " + trackSpeed.Value.ToString());
+            SendCommand("speed " + trackSpeed.Value.ToString(), CommandType.SMC);
         }
 
         [Obsolete]
@@ -193,7 +201,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
         } 
         private void btnCam_Click(object sender, EventArgs e)
         {
-            SendCommand("StartCam");
+            SendCommand("StartCam", CommandType.SCC);
             new frmCamRobotTest("192.168.43.41",81).ShowDialog();
         }
 
@@ -228,15 +236,25 @@ namespace WinApp_GraphicInterface.Forms.Robots
             if (trackSpeed.Value == 0)
             {
                 trackSpeed.Value = 100;
-                SendCommand("speed " + trackSpeed.Value.ToString());
+                SendCommand("speed " + trackSpeed.Value.ToString(), CommandType.SMC);
 
             }
-            SendCommand(command);
+            SendCommand(command, CommandType.SMC);
         }
 
         private void btnsControl_MouseUp(object sender, MouseEventArgs e)
         {
-            SendCommand("stop");
+            SendCommand("stop", CommandType.SMC);
+        }
+
+        private void trackSensorServoMotor_Scroll(object sender, EventArgs e)
+        {
+            SendCommand("Servo " + trackSensorServoMotor.Value.ToString(), CommandType.SSC);
+        }
+
+        private void btnWiFi_Click(object sender, EventArgs e)
+        {
+            SendCommand("WiFiData", CommandType.SCW);
         }
     }
 }

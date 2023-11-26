@@ -36,17 +36,19 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.picLiveStream = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.grpCamera = new System.Windows.Forms.GroupBox();
+            this.grpCameraControl = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.trackCameraServoMotor = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLiveStream)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpCamera.SuspendLayout();
+            this.grpCameraControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackCameraServoMotor)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -122,50 +124,42 @@
             this.picLiveStream.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLiveStream.Location = new System.Drawing.Point(3, 18);
             this.picLiveStream.Name = "picLiveStream";
-            this.picLiveStream.Size = new System.Drawing.Size(702, 574);
+            this.picLiveStream.Size = new System.Drawing.Size(702, 518);
             this.picLiveStream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLiveStream.TabIndex = 15;
             this.picLiveStream.TabStop = false;
             // 
-            // groupBox1
+            // grpCamera
             // 
-            this.groupBox1.Controls.Add(this.picLiveStream);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 595);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Camera Live Streaming";
+            this.grpCamera.Controls.Add(this.picLiveStream);
+            this.grpCamera.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpCamera.Location = new System.Drawing.Point(0, 0);
+            this.grpCamera.Name = "grpCamera";
+            this.grpCamera.Size = new System.Drawing.Size(708, 539);
+            this.grpCamera.TabIndex = 16;
+            this.grpCamera.TabStop = false;
+            this.grpCamera.Text = "Camera Live Streaming";
             // 
-            // groupBox2
+            // grpCameraControl
             // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.btnSave);
-            this.groupBox2.Controls.Add(this.trackBar2);
-            this.groupBox2.Controls.Add(this.trackBar1);
-            this.groupBox2.Controls.Add(this.btnStopStream);
-            this.groupBox2.Controls.Add(this.btnStartStream);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(708, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(238, 595);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "CameraSetting";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Britnees";
+            this.grpCameraControl.Controls.Add(this.label2);
+            this.grpCameraControl.Controls.Add(this.label3);
+            this.grpCameraControl.Controls.Add(this.label1);
+            this.grpCameraControl.Controls.Add(this.comboBox1);
+            this.grpCameraControl.Controls.Add(this.checkBox1);
+            this.grpCameraControl.Controls.Add(this.btnSave);
+            this.grpCameraControl.Controls.Add(this.trackBar2);
+            this.grpCameraControl.Controls.Add(this.trackBar1);
+            this.grpCameraControl.Controls.Add(this.btnStopStream);
+            this.grpCameraControl.Controls.Add(this.btnStartStream);
+            this.grpCameraControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grpCameraControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpCameraControl.Location = new System.Drawing.Point(708, 0);
+            this.grpCameraControl.Name = "grpCameraControl";
+            this.grpCameraControl.Size = new System.Drawing.Size(238, 595);
+            this.grpCameraControl.TabIndex = 17;
+            this.grpCameraControl.TabStop = false;
+            this.grpCameraControl.Text = "CameraSetting";
             // 
             // label2
             // 
@@ -176,13 +170,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Reselution";
             // 
-            // trackBar2
-            // 
-            this.trackBar2.Location = new System.Drawing.Point(84, 91);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(142, 56);
-            this.trackBar2.TabIndex = 13;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -192,12 +179,41 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Flash Light";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Britnees";
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(84, 91);
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(142, 56);
+            this.trackBar2.TabIndex = 13;
+            // 
+            // trackCameraServoMotor
+            // 
+            this.trackCameraServoMotor.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.trackCameraServoMotor.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.trackCameraServoMotor.Location = new System.Drawing.Point(0, 539);
+            this.trackCameraServoMotor.Maximum = 180;
+            this.trackCameraServoMotor.Name = "trackCameraServoMotor";
+            this.trackCameraServoMotor.Size = new System.Drawing.Size(708, 56);
+            this.trackCameraServoMotor.SmallChange = 5;
+            this.trackCameraServoMotor.TabIndex = 18;
+            this.trackCameraServoMotor.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackCameraServoMotor.Value = 90;
+            // 
             // frmCamRobotTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(946, 617);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpCamera);
+            this.Controls.Add(this.trackCameraServoMotor);
+            this.Controls.Add(this.grpCameraControl);
             this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -206,10 +222,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCamRobotTest_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLiveStream)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpCamera.ResumeLayout(false);
+            this.grpCameraControl.ResumeLayout(false);
+            this.grpCameraControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackCameraServoMotor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,11 +242,12 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox picLiveStream;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpCamera;
+        private System.Windows.Forms.GroupBox grpCameraControl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.TrackBar trackCameraServoMotor;
     }
 }
