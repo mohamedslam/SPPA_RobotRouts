@@ -122,6 +122,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             SDC,//       Display Control
             SCW,//       WiFi    Control
             SDS,//       Data    Serial 
+            SDR,//       Data    Route
+            RMC,
+            RSC,
         }
         public  void SendCommand(string command, CommandType commandType)
         {
@@ -232,7 +235,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private void btnsControl_MouseDown(object sender, MouseEventArgs e)
         {
             var btnOriantation = (Button)sender;
-            string command = btnOriantation.Name.ToLower().Replace("btn", "");
+            string command = btnOriantation.Name.ToLower().Replace("btn", "")+";Step:"+txtSteps.Text+";Angle:"+cmbAngle.Text;
             if (trackSpeed.Value == 0)
             {
                 trackSpeed.Value = 100;
@@ -255,6 +258,32 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private void btnWiFi_Click(object sender, EventArgs e)
         {
             SendCommand("WiFiData", CommandType.SCW);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            SendCommand("Home", CommandType.SDR);
+        }
+
+        private void btnRout_Click(object sender, EventArgs e)
+        {
+            string dataRoute = "";
+            SendCommand(dataRoute, CommandType.SDR);
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            SendCommand("stop", CommandType.SMC);
+        }
+
+        private void btnRMS_Click(object sender, EventArgs e)
+        {
+            SendCommand("", CommandType.RMC);
+        }
+
+        private void btnRSC_Click(object sender, EventArgs e)
+        {
+            SendCommand("", CommandType.RSC);
         }
     }
 }

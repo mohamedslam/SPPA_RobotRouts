@@ -98,6 +98,13 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblEncoderRight = new System.Windows.Forms.Label();
+            this.lblEncoderLeft = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnRMS = new System.Windows.Forms.Button();
+            this.btnRSC = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -156,26 +163,28 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.cmbRobotList.Location = new System.Drawing.Point(63, 15);
             this.cmbRobotList.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRobotList.Name = "cmbRobotList";
-            this.cmbRobotList.Size = new System.Drawing.Size(296, 24);
+            this.cmbRobotList.Size = new System.Drawing.Size(286, 24);
             this.cmbRobotList.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 19);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3.Location = new System.Drawing.Point(9, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Robot:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label1.Location = new System.Drawing.Point(410, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Robot IP:";
             // 
@@ -186,11 +195,11 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.txtRobotIP.Name = "txtRobotIP";
             this.txtRobotIP.Size = new System.Drawing.Size(157, 22);
             this.txtRobotIP.TabIndex = 3;
-            this.txtRobotIP.Text = "192.168.43.3";
+            this.txtRobotIP.Text = "192.168.43.2";
             // 
             // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(548, 24);
+            this.txtPort.Location = new System.Drawing.Point(481, 60);
             this.txtPort.Margin = new System.Windows.Forms.Padding(4);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(37, 22);
@@ -243,9 +252,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.checkBox2.Location = new System.Drawing.Point(1305, 27);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(56, 20);
+            this.checkBox2.Size = new System.Drawing.Size(61, 20);
             this.checkBox2.TabIndex = 26;
             this.checkBox2.Text = "Scrol";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -254,10 +264,11 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.label7.Location = new System.Drawing.Point(9, 31);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(46, 16);
             this.label7.TabIndex = 25;
             this.label7.Text = "From:";
             // 
@@ -315,9 +326,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(738, 22);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.checkBox1.Location = new System.Drawing.Point(760, 21);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 20);
+            this.checkBox1.Size = new System.Drawing.Size(61, 20);
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Scrol";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -351,10 +363,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnClearSent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSent.ImageKey = "delete.png";
             this.btnClearSent.ImageList = this.imageList1;
-            this.btnClearSent.Location = new System.Drawing.Point(804, 10);
+            this.btnClearSent.Location = new System.Drawing.Point(823, 9);
             this.btnClearSent.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearSent.Name = "btnClearSent";
-            this.btnClearSent.Size = new System.Drawing.Size(51, 41);
+            this.btnClearSent.Size = new System.Drawing.Size(30, 38);
             this.btnClearSent.TabIndex = 25;
             this.btnClearSent.UseVisualStyleBackColor = false;
             this.btnClearSent.Click += new System.EventHandler(this.btnClearSent_Click);
@@ -364,22 +376,23 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.richTextBoxDataSent.BackColor = System.Drawing.Color.MidnightBlue;
             this.richTextBoxDataSent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxDataSent.ForeColor = System.Drawing.Color.White;
-            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 59);
+            this.richTextBoxDataSent.Location = new System.Drawing.Point(4, 49);
             this.richTextBoxDataSent.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxDataSent.MaxLength = 2;
             this.richTextBoxDataSent.Name = "richTextBoxDataSent";
             this.richTextBoxDataSent.ReadOnly = true;
-            this.richTextBoxDataSent.Size = new System.Drawing.Size(852, 231);
+            this.richTextBoxDataSent.Size = new System.Drawing.Size(852, 241);
             this.richTextBoxDataSent.TabIndex = 24;
             this.richTextBoxDataSent.Text = "";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(314, 24);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label4.Location = new System.Drawing.Point(409, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Host IP:";
             // 
@@ -388,7 +401,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRefreshServerIp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshServerIp.ImageKey = "refresh.png";
             this.btnRefreshServerIp.ImageList = this.imageList1;
-            this.btnRefreshServerIp.Location = new System.Drawing.Point(596, 23);
+            this.btnRefreshServerIp.Location = new System.Drawing.Point(643, 12);
             this.btnRefreshServerIp.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefreshServerIp.Name = "btnRefreshServerIp";
             this.btnRefreshServerIp.Size = new System.Drawing.Size(42, 45);
@@ -398,18 +411,18 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // cmbtxtServerIps
             // 
             this.cmbtxtServerIps.FormattingEnabled = true;
-            this.cmbtxtServerIps.Location = new System.Drawing.Point(391, 21);
+            this.cmbtxtServerIps.Location = new System.Drawing.Point(481, 10);
             this.cmbtxtServerIps.Name = "cmbtxtServerIps";
             this.cmbtxtServerIps.Size = new System.Drawing.Size(154, 24);
             this.cmbtxtServerIps.TabIndex = 7;
             // 
             // txthostName
             // 
-            this.txthostName.Location = new System.Drawing.Point(391, 46);
+            this.txthostName.Location = new System.Drawing.Point(481, 35);
             this.txthostName.Margin = new System.Windows.Forms.Padding(4);
             this.txthostName.Name = "txthostName";
             this.txthostName.ReadOnly = true;
-            this.txthostName.Size = new System.Drawing.Size(194, 22);
+            this.txthostName.Size = new System.Drawing.Size(154, 22);
             this.txthostName.TabIndex = 5;
             // 
             // groupBox4
@@ -439,16 +452,20 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.txtSteps);
             this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.lblEncoderLeft);
+            this.groupBox5.Controls.Add(this.lblEncoderRight);
             this.groupBox5.Controls.Add(this.btnSelfLeft);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.btnforward);
             this.groupBox5.Controls.Add(this.btnLeft);
             this.groupBox5.Controls.Add(this.btnBack);
             this.groupBox5.Controls.Add(this.btnSelfRight);
             this.groupBox5.Controls.Add(this.btnRight);
             this.groupBox5.Controls.Add(this.btnStop);
-            this.groupBox5.Location = new System.Drawing.Point(347, 96);
+            this.groupBox5.Location = new System.Drawing.Point(347, 89);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(233, 332);
+            this.groupBox5.Size = new System.Drawing.Size(233, 339);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Movment";
@@ -477,7 +494,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelfLeft.ImageKey = "SelfLeft.png";
             this.btnSelfLeft.ImageList = this.imageList1;
-            this.btnSelfLeft.Location = new System.Drawing.Point(30, 92);
+            this.btnSelfLeft.Location = new System.Drawing.Point(30, 66);
             this.btnSelfLeft.Name = "btnSelfLeft";
             this.btnSelfLeft.Size = new System.Drawing.Size(40, 40);
             this.btnSelfLeft.TabIndex = 4;
@@ -490,7 +507,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnforward.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnforward.ImageKey = "forward.png";
             this.btnforward.ImageList = this.imageList1;
-            this.btnforward.Location = new System.Drawing.Point(85, 87);
+            this.btnforward.Location = new System.Drawing.Point(85, 61);
             this.btnforward.Name = "btnforward";
             this.btnforward.Size = new System.Drawing.Size(55, 50);
             this.btnforward.TabIndex = 4;
@@ -503,7 +520,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLeft.ImageKey = "left.png";
             this.btnLeft.ImageList = this.imageList1;
-            this.btnLeft.Location = new System.Drawing.Point(30, 137);
+            this.btnLeft.Location = new System.Drawing.Point(30, 111);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(55, 50);
             this.btnLeft.TabIndex = 4;
@@ -516,7 +533,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ImageKey = "Back.png";
             this.btnBack.ImageList = this.imageList1;
-            this.btnBack.Location = new System.Drawing.Point(86, 189);
+            this.btnBack.Location = new System.Drawing.Point(86, 163);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(55, 50);
             this.btnBack.TabIndex = 4;
@@ -529,7 +546,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnSelfRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelfRight.ImageKey = "SelfRight.png";
             this.btnSelfRight.ImageList = this.imageList1;
-            this.btnSelfRight.Location = new System.Drawing.Point(155, 91);
+            this.btnSelfRight.Location = new System.Drawing.Point(155, 65);
             this.btnSelfRight.Name = "btnSelfRight";
             this.btnSelfRight.Size = new System.Drawing.Size(40, 40);
             this.btnSelfRight.TabIndex = 4;
@@ -542,7 +559,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRight.ImageKey = "right.png";
             this.btnRight.ImageList = this.imageList1;
-            this.btnRight.Location = new System.Drawing.Point(142, 137);
+            this.btnRight.Location = new System.Drawing.Point(142, 111);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(55, 50);
             this.btnRight.TabIndex = 4;
@@ -555,16 +572,17 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.ImageKey = "Stop.png";
             this.btnStop.ImageList = this.imageList1;
-            this.btnStop.Location = new System.Drawing.Point(86, 138);
+            this.btnStop.Location = new System.Drawing.Point(86, 112);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(55, 50);
             this.btnStop.TabIndex = 4;
             this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
-            this.btnStop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRSC);
+            this.groupBox1.Controls.Add(this.btnRMS);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.trackSensorServoMotor);
             this.groupBox1.Controls.Add(this.label11);
@@ -580,9 +598,9 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox1.Controls.Add(this.lblSensorR);
             this.groupBox1.Controls.Add(this.lblSensorL);
             this.groupBox1.Controls.Add(this.lblSensorB);
-            this.groupBox1.Location = new System.Drawing.Point(3, 90);
+            this.groupBox1.Location = new System.Drawing.Point(3, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 341);
+            this.groupBox1.Size = new System.Drawing.Size(340, 342);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sensors";
@@ -590,7 +608,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // trackSensorServoMotor
             // 
             this.trackSensorServoMotor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.trackSensorServoMotor.Location = new System.Drawing.Point(3, 282);
+            this.trackSensorServoMotor.Location = new System.Drawing.Point(3, 283);
             this.trackSensorServoMotor.Maximum = 180;
             this.trackSensorServoMotor.Name = "trackSensorServoMotor";
             this.trackSensorServoMotor.Size = new System.Drawing.Size(334, 56);
@@ -687,8 +705,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnRout.Size = new System.Drawing.Size(61, 45);
             this.btnRout.TabIndex = 13;
             this.btnRout.UseVisualStyleBackColor = true;
-            this.btnRout.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
-            this.btnRout.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
+            this.btnRout.Click += new System.EventHandler(this.btnRout_Click);
             // 
             // btnHome
             // 
@@ -700,8 +717,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnHome.Size = new System.Drawing.Size(61, 45);
             this.btnHome.TabIndex = 13;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseDown);
-            this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnsControl_MouseUp);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnCam
             // 
@@ -754,7 +770,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label9.Location = new System.Drawing.Point(20, 57);
+            this.label9.Location = new System.Drawing.Point(10, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
             this.label9.TabIndex = 11;
@@ -763,12 +779,13 @@ namespace WinApp_GraphicInterface.Forms.Robots
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(315, 50);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label5.Location = new System.Drawing.Point(410, 38);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 6;
-            this.label5.Text = "HostName:";
+            this.label5.Text = "Name:";
             // 
             // label6
             // 
@@ -801,10 +818,10 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.ImageKey = "WiFi.png";
             this.btnConnect.ImageList = this.imageList1;
-            this.btnConnect.Location = new System.Drawing.Point(784, 8);
+            this.btnConnect.Location = new System.Drawing.Point(792, 11);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(72, 64);
+            this.btnConnect.Size = new System.Drawing.Size(61, 47);
             this.btnConnect.TabIndex = 0;
             this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -853,7 +870,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.cmbAngle.Size = new System.Drawing.Size(55, 24);
             this.cmbAngle.Sorted = true;
             this.cmbAngle.TabIndex = 7;
-            this.cmbAngle.Text = "45";
+            this.cmbAngle.Text = "0";
             // 
             // label11
             // 
@@ -888,7 +905,7 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.groupBox6.Controls.Add(this.trackSpeed);
             this.groupBox6.Controls.Add(this.lblSpeedValue);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(3, 271);
+            this.groupBox6.Location = new System.Drawing.Point(3, 278);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(227, 58);
             this.groupBox6.TabIndex = 17;
@@ -901,20 +918,21 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.trackSpeed.Location = new System.Drawing.Point(3, 18);
             this.trackSpeed.Maximum = 255;
             this.trackSpeed.Name = "trackSpeed";
-            this.trackSpeed.Size = new System.Drawing.Size(540, 37);
+            this.trackSpeed.Size = new System.Drawing.Size(189, 37);
             this.trackSpeed.TabIndex = 5;
+            this.trackSpeed.Scroll += new System.EventHandler(this.trackSpeed_Scroll);
             // 
             // lblSpeedValue
             // 
             this.lblSpeedValue.AutoSize = true;
             this.lblSpeedValue.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblSpeedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblSpeedValue.Location = new System.Drawing.Point(206, 18);
+            this.lblSpeedValue.Location = new System.Drawing.Point(188, 18);
             this.lblSpeedValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpeedValue.Name = "lblSpeedValue";
-            this.lblSpeedValue.Size = new System.Drawing.Size(18, 20);
+            this.lblSpeedValue.Size = new System.Drawing.Size(36, 20);
             this.lblSpeedValue.TabIndex = 2;
-            this.lblSpeedValue.Text = "1";
+            this.lblSpeedValue.Text = "000";
             this.lblSpeedValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -946,25 +964,96 @@ namespace WinApp_GraphicInterface.Forms.Robots
             this.label16.TabIndex = 5;
             this.label16.Text = "C";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label17.Location = new System.Drawing.Point(6, 225);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 16);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Encoder Right:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label18.Location = new System.Drawing.Point(6, 252);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 16);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Encoder Left:";
+            // 
+            // lblEncoderRight
+            // 
+            this.lblEncoderRight.AutoSize = true;
+            this.lblEncoderRight.Location = new System.Drawing.Point(127, 225);
+            this.lblEncoderRight.Name = "lblEncoderRight";
+            this.lblEncoderRight.Size = new System.Drawing.Size(14, 16);
+            this.lblEncoderRight.TabIndex = 5;
+            this.lblEncoderRight.Text = "0";
+            // 
+            // lblEncoderLeft
+            // 
+            this.lblEncoderLeft.AutoSize = true;
+            this.lblEncoderLeft.Location = new System.Drawing.Point(127, 252);
+            this.lblEncoderLeft.Name = "lblEncoderLeft";
+            this.lblEncoderLeft.Size = new System.Drawing.Size(14, 16);
+            this.lblEncoderLeft.TabIndex = 5;
+            this.lblEncoderLeft.Text = "0";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label19.Location = new System.Drawing.Point(410, 60);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 16);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Port:";
+            // 
+            // btnRMS
+            // 
+            this.btnRMS.Location = new System.Drawing.Point(34, 158);
+            this.btnRMS.Name = "btnRMS";
+            this.btnRMS.Size = new System.Drawing.Size(75, 23);
+            this.btnRMS.TabIndex = 21;
+            this.btnRMS.Text = "RMC";
+            this.btnRMS.UseVisualStyleBackColor = true;
+            this.btnRMS.Click += new System.EventHandler(this.btnRMS_Click);
+            // 
+            // btnRSC
+            // 
+            this.btnRSC.Location = new System.Drawing.Point(115, 158);
+            this.btnRSC.Name = "btnRSC";
+            this.btnRSC.Size = new System.Drawing.Size(75, 23);
+            this.btnRSC.TabIndex = 21;
+            this.btnRSC.Text = "RSC";
+            this.btnRSC.UseVisualStyleBackColor = true;
+            this.btnRSC.Click += new System.EventHandler(this.btnRSC_Click);
+            // 
             // frmRobotTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1444, 817);
+            this.Controls.Add(this.txtPort);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txthostName);
             this.Controls.Add(this.cmbtxtServerIps);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.btnRefreshServerIp);
-            this.Controls.Add(this.txtPort);
             this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.btnRefreshServerIp);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRobotTest";
@@ -1060,5 +1149,12 @@ namespace WinApp_GraphicInterface.Forms.Robots
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblEncoderLeft;
+        private System.Windows.Forms.Label lblEncoderRight;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnRSC;
+        private System.Windows.Forms.Button btnRMS;
     }
 }
